@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 780" width="1080" height="780">
+  <defs>
+    <style>
+      * { font-family: 'Segoe UI', Arial, sans-serif; }
+      .bg { fill: #ffffff; }
+      .border-box { stroke: #0f172a; stroke-width: 2.2; fill: none; }
+      
+      /* Entities */
+      .ent-rect { fill: #f8fafc; stroke: #0f172a; stroke-width: 2.2; rx: 6; ry: 6; }
+      .ent-head { fill: #e2e8f0; stroke: #0f172a; stroke-width: 2; }
+      .ent-title { font-size: 15px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+      .ent-sub { font-size: 12px; fill: #334155; text-anchor: middle; font-weight: 500; }
+      
+      /* Processes */
+      .proc-box { fill: #ffffff; stroke: #0f172a; stroke-width: 2.4; rx: 16; ry: 16; }
+      .proc-head { fill: #f1f5f9; stroke: #0f172a; stroke-width: 2; }
+      .proc-id { font-size: 14px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+      .proc-name { font-size: 14px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+      .proc-desc { font-size: 12px; fill: #475569; text-anchor: middle; }
+
+      /* Data Stores */
+      .store-line { stroke: #0f172a; stroke-width: 2.2; }
+      .store-id-bg { fill: #e2e8f0; stroke: #0f172a; stroke-width: 1.8; }
+      .store-id-txt { font-size: 13px; font-weight: bold; fill: #0f172a; text-anchor: middle; font-family: monospace; }
+      .store-name-txt { font-size: 13px; font-weight: bold; fill: #0f172a; text-anchor: start; }
+
+      /* Arrows & Labels */
+      .arrow-line { stroke: #0f172a; stroke-width: 2.2; fill: none; }
+      .lbl-box { fill: #ffffff; stroke: #64748b; stroke-width: 1; rx: 4; ry: 4; }
+      .lbl-txt { font-size: 12.5px; font-weight: bold; fill: #0f172a; text-anchor: middle; }
+    </style>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#0f172a" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1080" height="780" class="bg"/>
+
+  <!-- Outer Formal Border -->
+  <rect x="15" y="15" width="1050" height="750" class="border-box"/>
+  <rect x="20" y="20" width="1040" height="740" stroke="#94a3b8" stroke-width="0.8" fill="none"/>
+
+  <!-- Header Banner -->
+  <rect x="30" y="30" width="1020" height="55" fill="#f8fafc" stroke="#0f172a" stroke-width="1.8" rx="4"/>
+  <text x="540" y="55" font-size="18px" font-weight="bold" fill="#0f172a" text-anchor="middle" letter-spacing="0.5px">CAMPUSCART — LEVEL 1 — MAJOR FUNCTIONAL PROCESSES</text>
+  <text x="540" y="74" font-size="12.5px" fill="#475569" text-anchor="middle">7 Functional Process Modules & 4 Central Data Stores</text>
+
+  <!-- Diagram Content -->
+  
+  <!-- ENTITIES -->
+  <!-- Buyer (Left) -->
+  <g id="ent-b1">
+    <rect x="35" y="240" width="130" height="150" class="ent-rect"/>
+    <rect x="35" y="240" width="130" height="30" rx="6" ry="6" class="ent-head"/>
+    <line x1="35" y1="270" x2="165" y2="270" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="100" y="261" class="ent-title" font-size="13px">BUYER</text>
+    <text x="100" y="295" class="ent-sub">• Search Items</text>
+    <text x="100" y="320" class="ent-sub">• Place Order</text>
+    <text x="100" y="345" class="ent-sub">• Pay UPI / Cash</text>
+    <text x="100" y="370" class="ent-sub">• Handover OTP</text>
+  </g>
+
+  <!-- Seller (Right) -->
+  <g id="ent-s1">
+    <rect x="915" y="240" width="130" height="150" class="ent-rect"/>
+    <rect x="915" y="240" width="130" height="30" rx="6" ry="6" class="ent-head"/>
+    <line x1="915" y1="270" x2="1045" y2="270" stroke="#0f172a" stroke-width="1.5"/>
+    <text x="980" y="261" class="ent-title" font-size="13px">SELLER</text>
+    <text x="980" y="295" class="ent-sub">• Post Listings</text>
+    <text x="980" y="320" class="ent-sub">• Order Alerts</text>
+    <text x="980" y="345" class="ent-sub">• Handover Item</text>
+    <text x="980" y="370" class="ent-sub">• Submit OTP</text>
+  </g>
+
+  <!-- PROCESSES -->
+  
+    <g id="p1">
+      <rect x="210" y="110" width="195" height="70" class="proc-box"/>
+      <rect x="210" y="110" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="210" y="122" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="210" y1="134" x2="405" y2="134" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="307.5" y="127" class="proc-id">1.0</text>
+      <text x="307.5" y="158" class="proc-name" font-size="13px">User Auth & Profile</text>
+    </g>
+  
+    <g id="p2">
+      <rect x="670" y="110" width="195" height="70" class="proc-box"/>
+      <rect x="670" y="110" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="670" y="122" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="670" y1="134" x2="865" y2="134" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="767.5" y="127" class="proc-id">2.0</text>
+      <text x="767.5" y="158" class="proc-name" font-size="13px">Product Catalog</text>
+    </g>
+  
+    <g id="p3">
+      <rect x="210" y="270" width="195" height="70" class="proc-box"/>
+      <rect x="210" y="270" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="210" y="282" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="210" y1="294" x2="405" y2="294" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="307.5" y="287" class="proc-id">3.0</text>
+      <text x="307.5" y="318" class="proc-name" font-size="13px">Search & Browse</text>
+    </g>
+  
+    <g id="p4">
+      <rect x="210" y="430" width="195" height="70" class="proc-box"/>
+      <rect x="210" y="430" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="210" y="442" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="210" y1="454" x2="405" y2="454" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="307.5" y="447" class="proc-id">4.0</text>
+      <text x="307.5" y="478" class="proc-name" font-size="13px">Order & UPI QR Engine</text>
+    </g>
+  
+    <g id="p5">
+      <rect x="670" y="430" width="195" height="70" class="proc-box"/>
+      <rect x="670" y="430" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="670" y="442" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="670" y1="454" x2="865" y2="454" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="767.5" y="447" class="proc-id">5.0</text>
+      <text x="767.5" y="478" class="proc-name" font-size="13px">Handover & OTP Engine</text>
+    </g>
+  
+    <g id="p6">
+      <rect x="670" y="270" width="195" height="70" class="proc-box"/>
+      <rect x="670" y="270" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="670" y="282" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="670" y1="294" x2="865" y2="294" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="767.5" y="287" class="proc-id">6.0</text>
+      <text x="767.5" y="318" class="proc-name" font-size="13px">CartMate AI Assistant</text>
+    </g>
+  
+    <g id="p7">
+      <rect x="440" y="610" width="195" height="70" class="proc-box"/>
+      <rect x="440" y="610" width="195" height="24" rx="14" ry="14" class="proc-head"/>
+      <rect x="440" y="622" width="195" height="12" fill="#f1f5f9" stroke="none"/>
+      <line x1="440" y1="634" x2="635" y2="634" stroke="#0f172a" stroke-width="1.8"/>
+      <text x="537.5" y="627" class="proc-id">7.0</text>
+      <text x="537.5" y="658" class="proc-name" font-size="13px">Admin Safety Moderation</text>
+    </g>
+
+  <!-- DATA STORES -->
+  
+    <g id="st1">
+      <line x1="440" y1="125" x2="640" y2="125" class="store-line"/>
+      <line x1="440" y1="167" x2="640" y2="167" class="store-line"/>
+      <rect x="440" y="125" width="42" height="42" class="store-id-bg"/>
+      <text x="461" y="151" class="store-id-txt">D1</text>
+      <rect x="482" y="126" width="158" height="40" fill="#ffffff"/>
+      <text x="495" y="151" class="store-name-txt">Users (MySQL)</text>
+    </g>
+  
+    <g id="st2">
+      <line x1="440" y1="285" x2="640" y2="285" class="store-line"/>
+      <line x1="440" y1="327" x2="640" y2="327" class="store-line"/>
+      <rect x="440" y="285" width="42" height="42" class="store-id-bg"/>
+      <text x="461" y="311" class="store-id-txt">D2</text>
+      <rect x="482" y="286" width="158" height="40" fill="#ffffff"/>
+      <text x="495" y="311" class="store-name-txt">Products (MySQL)</text>
+    </g>
+  
+    <g id="st3">
+      <line x1="440" y1="415" x2="640" y2="415" class="store-line"/>
+      <line x1="440" y1="457" x2="640" y2="457" class="store-line"/>
+      <rect x="440" y="415" width="42" height="42" class="store-id-bg"/>
+      <text x="461" y="441" class="store-id-txt">D3</text>
+      <rect x="482" y="416" width="158" height="40" fill="#ffffff"/>
+      <text x="495" y="441" class="store-name-txt">Orders (MySQL)</text>
+    </g>
+  
+    <g id="st4">
+      <line x1="440" y1="485" x2="640" y2="485" class="store-line"/>
+      <line x1="440" y1="527" x2="640" y2="527" class="store-line"/>
+      <rect x="440" y="485" width="42" height="42" class="store-id-bg"/>
+      <text x="461" y="511" class="store-id-txt">D4</text>
+      <rect x="482" y="486" width="158" height="40" fill="#ffffff"/>
+      <text x="495" y="511" class="store-name-txt">Handover OTPs</text>
+    </g>
+
+  <!-- ARROWS & LABELS -->
+  <!-- Buyer -> 1.0 Auth -->
+  <path d="M 100 240 L 100 145 L 210 145" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="115" y="133" width="85" height="24" class="lbl-box"/>
+  <text x="157" y="150" class="lbl-txt">Login Info</text>
+
+  <!-- 1.0 Auth <-> D1 -->
+  <path d="M 405 145 L 440 145" class="arrow-line" marker-end="url(#arr)"/>
+
+  <!-- Seller -> 2.0 Product -->
+  <path d="M 980 240 L 980 145 L 865 145" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="880" y="133" width="90" height="24" class="lbl-box"/>
+  <text x="925" y="150" class="lbl-txt">Listing Data</text>
+
+  <!-- 2.0 Product -> D2 -->
+  <path d="M 670 145 L 590 145 L 590 285" class="arrow-line" marker-end="url(#arr)"/>
+
+  <!-- Buyer -> 3.0 Search -->
+  <path d="M 165 305 L 210 305" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="168" y="293" width="40" height="24" class="lbl-box"/>
+  <text x="188" y="310" class="lbl-txt">Query</text>
+
+  <!-- D2 -> 3.0 Search -->
+  <path d="M 440 305 L 405 305" class="arrow-line" marker-end="url(#arr)"/>
+
+  <!-- 3.0 Search -> Buyer -->
+  <path d="M 210 335 L 165 335" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="168" y="323" width="40" height="24" class="lbl-box"/>
+  <text x="188" y="340" class="lbl-txt">Items</text>
+
+  <!-- Buyer -> 4.0 Orders -->
+  <path d="M 100 390 L 100 465 L 210 465" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="110" y="453" width="90" height="24" class="lbl-box"/>
+  <text x="155" y="470" class="lbl-txt">Order Request</text>
+
+  <!-- 4.0 Orders -> D3 Orders -->
+  <path d="M 405 445 L 440 445" class="arrow-line" marker-end="url(#arr)"/>
+
+  <!-- 4.0 Orders -> D4 OTPs -->
+  <path d="M 310 500 L 310 505 L 440 505" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="325" y="493" width="95" height="24" class="lbl-box"/>
+  <text x="372" y="510" class="lbl-txt">Save 6-Dig OTP</text>
+
+  <!-- 4.0 Orders -> Buyer (UPI QR) -->
+  <path d="M 210 485 L 140 485 L 140 390" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="145" y="430" width="60" height="24" class="lbl-box"/>
+  <text x="175" y="447" class="lbl-txt">UPI QR</text>
+
+  <!-- Seller -> 5.0 Handover OTP -->
+  <path d="M 980 390 L 980 465 L 865 465" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="880" y="453" width="90" height="24" class="lbl-box"/>
+  <text x="925" y="470" class="lbl-txt">Submit OTP</text>
+
+  <!-- 5.0 Handover <-> D4 OTP -->
+  <path d="M 670 475 L 640 475 L 640 505" class="arrow-line" marker-end="url(#arr)"/>
+
+  <!-- 5.0 Handover -> D2 & D3 (Mark SOLD) -->
+  <path d="M 770 430 L 770 370 L 640 370" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="670" y="358" width="100" height="24" class="lbl-box"/>
+  <text x="720" y="375" class="lbl-txt">Set Item SOLD</text>
+
+  <!-- 6.0 AI -> D2 Product Catalog -->
+  <path d="M 670 305 L 640 305" class="arrow-line" marker-end="url(#arr)"/>
+
+  <!-- Admin -> 7.0 Moderation -->
+  <rect x="235" y="620" width="120" height="50" class="ent-rect"/>
+  <text x="295" y="650" class="ent-title" font-size="13px">ADMIN</text>
+  <path d="M 355 645 L 440 645" class="arrow-line" marker-end="url(#arr)"/>
+  <rect x="365" y="633" width="70" height="24" class="lbl-box"/>
+  <text x="400" y="650" class="lbl-txt">Policies</text>
+  
+
+  <!-- Footer -->
+  <rect x="30" y="735" width="1020" height="30" fill="#f8fafc" stroke="#0f172a" stroke-width="1.2" rx="4"/>
+  <text x="45" y="754" font-size="12px" font-weight="bold" fill="#0f172a">CampusCart Project Report</text>
+  <text x="540" y="754" font-size="11.5px" fill="#475569" text-anchor="middle">Standard: Gane-Sarson / IEEE Academic Specification</text>
+  <text x="1035" y="754" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="end">Level 1 — Major Functional Processes</text>
+</svg>

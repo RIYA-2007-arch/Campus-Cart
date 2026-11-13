@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <filter id="shadowCitizen" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="bodyGradCit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="60%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pure White Background -->
+  <rect width="600" height="600" fill="#ffffff"/>
+
+  <!-- Calculator Body (Sharp Rectangular Industrial Citizen Shape) -->
+  <g filter="url(#shadowCitizen)">
+    <rect x="157" y="32" width="286" height="536" rx="18" fill="#030712"/>
+    <!-- Deep Matte Black Body -->
+    <rect x="160" y="35" width="280" height="530" rx="16" fill="url(#bodyGradCit)"/>
+    <rect x="164" y="39" width="272" height="522" rx="13" fill="none" stroke="#374151" stroke-width="1.2" opacity="0.6"/>
+  </g>
+
+  <!-- Citizen Signature Header -->
+  <text x="188" y="68" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="900" fill="#dc2626" letter-spacing="2">CITIZEN</text>
+  <text x="188" y="85" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#f9fafb">SR-135N</text>
+  <text x="188" y="96" font-family="Arial, Helvetica, sans-serif" font-size="7.5" font-weight="bold" fill="#fbbf24" letter-spacing="0.5">SCIENTIFIC CALCULATOR</text>
+  <text x="412" y="75" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#9ca3af" text-anchor="end">128 FUNCTIONS</text>
+  <text x="412" y="87" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#6b7280" text-anchor="end">10+2 DIGITS</text>
+
+  <!-- Citizen 10+2 Digit Greenish-Grey LCD Screen -->
+  <g transform="translate(180, 102)">
+    <rect width="240" height="84" rx="4" fill="#030712" stroke="#1f2937" stroke-width="1.5"/>
+    <rect x="7" y="7" width="226" height="70" rx="2" fill="#8ca393"/>
+    <polygon points="7,7 130,7 80,77 7,77" fill="#ffffff" opacity="0.12"/>
+
+    <!-- Screen Status Flag -->
+    <text x="14" y="22" font-family="monospace" font-size="8" font-weight="bold" fill="#1f2937">DEG   2ndF</text>
+    <!-- Big 7-Segment Value -->
+    <text x="195" y="62" font-family="'Courier New', monospace" font-size="24" font-weight="900" fill="#030712" text-anchor="end">3.141592654</text>
+    <text x="218" y="44" font-family="'Courier New', monospace" font-size="11" font-weight="900" fill="#030712" text-anchor="end">-02</text>
+  </g>
+
+  <!-- Citizen Signature Top Function Row -->
+  <!-- 2ndF (Yellow) -->
+  <rect x="180" y="198" width="50" height="22" rx="4" fill="#eab308" stroke="#ca8a04" stroke-width="1"/>
+  <text x="205" y="213" font-family="Arial, sans-serif" font-size="10" font-weight="900" fill="#000000" text-anchor="middle">2ndF</text>
+
+  <!-- MODE -->
+  <rect x="242" y="198" width="50" height="22" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/>
+  <text x="267" y="213" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">MODE</text>
+
+  <!-- OFF (Red) -->
+  <rect x="304" y="198" width="50" height="22" rx="4" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+  <text x="329" y="213" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">OFF</text>
+
+  <!-- ON/C (Blue) -->
+  <rect x="366" y="198" width="54" height="22" rx="4" fill="#3b82f6" stroke="#2563eb" stroke-width="1"/>
+  <text x="393" y="213" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">ON/C</text>
+
+  <!-- Citizen Rectangular Math Function Keypad -->
+  <g fill="#1f2937" stroke="#374151" stroke-width="1" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold">
+    <!-- Row 1: sin, cos, tan, hyp, a b/c -->
+    <rect x="180" y="230" width="42" height="20" rx="3"/><text x="201" y="244" fill="#ffffff" text-anchor="middle">sin</text>
+    <rect x="230" y="230" width="42" height="20" rx="3"/><text x="251" y="244" fill="#ffffff" text-anchor="middle">cos</text>
+    <rect x="280" y="230" width="42" height="20" rx="3"/><text x="301" y="244" fill="#ffffff" text-anchor="middle">tan</text>
+    <rect x="330" y="230" width="42" height="20" rx="3"/><text x="351" y="244" fill="#ffffff" text-anchor="middle">hyp</text>
+    <rect x="380" y="230" width="42" height="20" rx="3"/><text x="401" y="244" fill="#ffffff" text-anchor="middle">a b/c</text>
+
+    <!-- Row 2: ln, log, x^y, √, x² -->
+    <rect x="180" y="258" width="42" height="20" rx="3"/><text x="201" y="272" fill="#ffffff" text-anchor="middle">ln</text>
+    <rect x="230" y="258" width="42" height="20" rx="3"/><text x="251" y="272" fill="#ffffff" text-anchor="middle">log</text>
+    <rect x="280" y="258" width="42" height="20" rx="3"/><text x="301" y="272" fill="#ffffff" text-anchor="middle">xʸ</text>
+    <rect x="330" y="258" width="42" height="20" rx="3"/><text x="351" y="272" fill="#ffffff" text-anchor="middle">√■</text>
+    <rect x="380" y="258" width="42" height="20" rx="3"/><text x="401" y="272" fill="#ffffff" text-anchor="middle">x²</text>
+
+    <!-- Row 3: 1/x, DEG, (, ), STO -->
+    <rect x="180" y="286" width="42" height="20" rx="3"/><text x="201" y="300" fill="#ffffff" text-anchor="middle">1/x</text>
+    <rect x="230" y="286" width="42" height="20" rx="3"/><text x="251" y="300" fill="#ffffff" text-anchor="middle">DRG</text>
+    <rect x="280" y="286" width="42" height="20" rx="3"/><text x="301" y="300" fill="#ffffff" text-anchor="middle">(</text>
+    <rect x="330" y="286" width="42" height="20" rx="3"/><text x="351" y="300" fill="#ffffff" text-anchor="middle">)</text>
+    <rect x="380" y="286" width="42" height="20" rx="3"/><text x="401" y="300" fill="#ffffff" text-anchor="middle">STO</text>
+  </g>
+
+  <!-- Citizen Numeric Keypad in Solid Matte Black with Sharp White Digits -->
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="bold">
+    <!-- Row 1: 7, 8, 9, CE, C -->
+    <rect x="180" y="325" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="201" y="347" font-size="16" fill="#ffffff" text-anchor="middle">7</text>
+    <rect x="230" y="325" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="251" y="347" font-size="16" fill="#ffffff" text-anchor="middle">8</text>
+    <rect x="280" y="325" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="301" y="347" font-size="16" fill="#ffffff" text-anchor="middle">9</text>
+    <rect x="330" y="325" width="42" height="34" rx="4" fill="#374151" stroke="#4b5563" stroke-width="1.5"/><text x="351" y="346" font-size="12" fill="#f97316" text-anchor="middle">CE</text>
+    <rect x="380" y="325" width="42" height="34" rx="4" fill="#374151" stroke="#4b5563" stroke-width="1.5"/><text x="401" y="346" font-size="12" fill="#ef4444" text-anchor="middle">C</text>
+
+    <!-- Row 2: 4, 5, 6, ×, ÷ -->
+    <rect x="180" y="372" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="201" y="394" font-size="16" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="230" y="372" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="251" y="394" font-size="16" fill="#ffffff" text-anchor="middle">5</text>
+    <rect x="280" y="372" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="301" y="394" font-size="16" fill="#ffffff" text-anchor="middle">6</text>
+    <rect x="330" y="372" width="42" height="34" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1.5"/><text x="351" y="394" font-size="17" fill="#ffffff" text-anchor="middle">×</text>
+    <rect x="380" y="372" width="42" height="34" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1.5"/><text x="401" y="394" font-size="17" fill="#ffffff" text-anchor="middle">÷</text>
+
+    <!-- Row 3: 1, 2, 3, +, - -->
+    <rect x="180" y="419" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="201" y="441" font-size="16" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="230" y="419" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="251" y="441" font-size="16" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="280" y="419" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="301" y="441" font-size="16" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="330" y="419" width="42" height="34" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1.5"/><text x="351" y="441" font-size="17" fill="#ffffff" text-anchor="middle">+</text>
+    <rect x="380" y="419" width="42" height="34" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1.5"/><text x="401" y="441" font-size="17" fill="#ffffff" text-anchor="middle">-</text>
+
+    <!-- Row 4: 0, +/-, ., EXP, = -->
+    <rect x="180" y="466" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="201" y="488" font-size="16" fill="#ffffff" text-anchor="middle">0</text>
+    <rect x="230" y="466" width="42" height="34" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1.5"/><text x="251" y="488" font-size="13" fill="#ffffff" text-anchor="middle">+/−</text>
+    <rect x="280" y="466" width="42" height="34" rx="4" fill="#111827" stroke="#374151" stroke-width="1.5"/><text x="301" y="488" font-size="18" fill="#ffffff" text-anchor="middle">•</text>
+    <rect x="330" y="466" width="42" height="34" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1.5"/><text x="351" y="487" font-size="11" fill="#ffffff" text-anchor="middle">EXP</text>
+    <rect x="380" y="466" width="42" height="34" rx="4" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/><text x="401" y="489" font-size="18" fill="#000000" text-anchor="middle">=</text>
+  </g>
+
+  <!-- Bottom Brand Footnote -->
+  <text x="300" y="535" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#6b7280" text-anchor="middle">CITIZEN SYSTEMS JAPAN CO., LTD.</text>
+</svg>

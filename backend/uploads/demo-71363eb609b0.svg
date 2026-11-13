@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <filter id="shadowTourister" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.22"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="navyGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="40%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="charcoalGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="#ffffff"/>
+
+  <!-- Top Haul Loop Strap -->
+  <path d="M 260 90 C 260 40, 340 40, 340 90" fill="none" stroke="#0f172a" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Main Backpack Silhouette with Drop Shadow -->
+  <g filter="url(#shadowTourister)" transform="translate(100, 75)">
+    <!-- Base Curved Body (32L College Backpack) -->
+    <path d="
+      M 60 440 
+      L 40 230 Q 50 70 200 60 Q 350 70 360 230 
+      L 340 440 Q 200 465 60 440 Z
+    " fill="url(#navyGrad)" stroke="#0f172a" stroke-width="2.5"/>
+
+    <!-- Bottom Reinforced Ballistic Base (Charcoal) -->
+    <path d="
+      M 60 440 
+      L 50 350 Q 200 375 350 350 
+      L 340 440 Q 200 465 60 440 Z
+    " fill="url(#charcoalGrad)" stroke="#0f172a" stroke-width="2"/>
+
+    <!-- Main Laptop Compartment Zipper Arc (Cyan Highlight) -->
+    <path d="M 65 240 Q 80 85 200 75 Q 320 85 335 240" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4,2"/>
+    <!-- Twin Pullers -->
+    <circle cx="195" cy="75" r="5" fill="#f8fafc" stroke="#0f172a"/>
+    <circle cx="205" cy="75" r="5" fill="#f8fafc" stroke="#0f172a"/>
+
+    <!-- Secondary Organizer Compartment Arc -->
+    <path d="M 85 280 Q 95 135 200 125 Q 305 135 315 280" fill="none" stroke="#0f172a" stroke-width="3"/>
+    <path d="M 90 280 Q 100 140 200 130 Q 300 140 310 280" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Front Quick-Access Stash Pocket (Charcoal with Cyan Accent) -->
+    <path d="
+      M 100 230 
+      Q 200 205 300 230 
+      L 290 340 
+      Q 200 360 110 340 Z
+    " fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+
+    <!-- Diagonal Front Reflective Strip -->
+    <line x1="120" y1="245" x2="280" y2="325" stroke="#38bdf8" stroke-width="3"/>
+
+    <!-- Side Elastic Mesh Bottle Pockets -->
+    <!-- Left bottle pocket with bottle -->
+    <rect x="25" y="270" width="30" height="90" rx="6" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
+    <rect x="32" y="240" width="16" height="30" rx="3" fill="#94a3b8"/>
+    <path d="M 20 285 Q 30 280 40 285 L 40 360 L 20 360 Z" fill="#1e293b" opacity="0.8"/>
+
+    <!-- Right bottle pocket -->
+    <rect x="345" y="285" width="25" height="75" rx="6" fill="#1e293b" stroke="#334155"/>
+
+    <!-- American Tourister Official Wordmark / Badge -->
+    <g transform="translate(130, 260)">
+      <rect width="140" height="32" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="70" y="16" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="900" fill="#dc2626" text-anchor="middle" letter-spacing="1">AMERICAN</text>
+      <text x="70" y="26" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="1.5">TOURISTER</text>
+    </g>
+
+    <!-- Bottom Feature Badge -->
+    <g transform="translate(100, 390)">
+      <rect width="200" height="28" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+      <text x="100" y="18" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f8fafc" text-anchor="middle">32L COLLEGE BACKPACK</text>
+    </g>
+  </g>
+</svg>

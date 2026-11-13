@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Background studio glow -->
+    <radialGradient id="ext-bg-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </radialGradient>
+
+    <!-- Plastic Enclosure Body Gradient (Light grey / clean white ABS) -->
+    <linearGradient id="strip-body-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="15%" stop-color="#f1f5f9"/>
+      <stop offset="70%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+
+    <!-- Socket Recess Gradient -->
+    <radialGradient id="socket-recess" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="85%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </radialGradient>
+
+    <!-- Illuminated Red Rocker Switch -->
+    <linearGradient id="switch-red-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="60%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+
+    <!-- Switch Glow Filter -->
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Cable Coiled Gradient -->
+    <linearGradient id="cable-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+
+    <!-- Realistic Drop Shadow for Board -->
+    <filter id="ext-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- Clean Studio White Background -->
+  <rect width="800" height="800" fill="url(#ext-bg-glow)"/>
+
+  <!-- Soft Floor Shadow for Power Strip & Coiled Cable -->
+  <ellipse cx="400" cy="540" rx="340" ry="110" fill="rgba(15, 23, 42, 0.08)"/>
+
+  <!-- Coiled Power Cable extending from Top-Left -->
+  <g fill="none" stroke="url(#cable-grad)" stroke-linecap="round">
+    <!-- Cable Loops behind power strip -->
+    <path d="M 195 240 C 130 190 90 280 120 370 C 145 440 220 440 230 380 C 240 310 180 270 150 310" stroke-width="16" opacity="0.85"/>
+    <path d="M 140 215 C 80 230 60 360 100 450 C 135 520 250 510 260 420" stroke-width="15" opacity="0.6"/>
+
+    <!-- Main Cable Lead entering the power strip -->
+    <path d="M 170 210 Q 210 210 230 250" stroke-width="17"/>
+    <!-- Flexible Strain Relief Boot -->
+    <g transform="translate(225, 246) rotate(45)">
+      <rect x="0" y="-8" width="22" height="16" rx="4" fill="#334155"/>
+      <rect x="6" y="-7" width="4" height="14" fill="#1e293b"/>
+      <rect x="13" y="-7" width="4" height="14" fill="#1e293b"/>
+    </g>
+  </g>
+
+  <!-- Molded 3-Pin Indian Power Plug at end of cable -->
+  <g transform="translate(130, 160) rotate(-25)">
+    <!-- Plug Base Shadow -->
+    <ellipse cx="28" cy="40" rx="28" ry="18" fill="rgba(15, 23, 42, 0.2)"/>
+    <!-- Plug Body -->
+    <path d="M 10 10 L 46 10 C 56 10 60 22 56 42 L 48 54 C 44 60 12 60 8 54 L 0 42 C -4 22 0 10 10 10 Z" fill="#1e293b"/>
+    <path d="M 12 14 L 44 14 C 50 14 54 22 50 38 L 44 48 C 40 52 16 52 12 48 L 6 38 C 2 22 6 14 12 14 Z" fill="#334155"/>
+    <!-- 3 Brass Pins (Isometric peek) -->
+    <circle cx="28" cy="2" r="6" fill="#eab308" stroke="#ca8a04" stroke-width="1.5"/>
+    <circle cx="14" cy="20" r="5" fill="#eab308" stroke="#ca8a04" stroke-width="1.5"/>
+    <circle cx="42" cy="20" r="5" fill="#eab308" stroke="#ca8a04" stroke-width="1.5"/>
+    <!-- 16A 250V Mark -->
+    <text x="28" y="38" font-family="Arial, sans-serif" font-size="6" font-weight="800" fill="#94a3b8" text-anchor="middle">10A 250V~</text>
+  </g>
+
+  <!-- Main Extension Board Body (Diagonal 4-Socket Power Strip) -->
+  <g filter="url(#ext-shadow)" transform="translate(420, 420) rotate(-18)">
+    <!-- Outer Housing -->
+    <rect x="-290" y="-80" width="580" height="160" rx="28" fill="url(#strip-body-grad)" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- Subtle Bevel Ridge around perimeter -->
+    <rect x="-282" y="-72" width="564" height="144" rx="20" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+
+    <!-- Keyhole Wall-Mounting Slot Indication (Left & Right ends) -->
+    <ellipse cx="-265" cy="0" rx="5" ry="8" fill="#94a3b8"/>
+    <circle cx="-265" cy="-3" r="3" fill="#64748b"/>
+    <ellipse cx="265" cy="0" rx="5" ry="8" fill="#94a3b8"/>
+    <circle cx="265" cy="-3" r="3" fill="#64748b"/>
+
+    <!-- Branding & Surge Protection Information (Top edge) -->
+    <g transform="translate(-230, -50)">
+      <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="900" fill="#0f172a" letter-spacing="1">SURGE GUARD PRO</text>
+      <text x="0" y="10" font-family="Arial, Helvetica, sans-serif" font-size="7" font-weight="700" fill="#64748b" letter-spacing="0.5">HEAVY DUTY 4-SOCKET SPIKE PROTECTOR • 2500W MAX</text>
+    </g>
+
+    <!-- Master Rocker Switch Section with Illuminated Neon Glow -->
+    <g transform="translate(-205, 5)">
+      <!-- Switch Bezel Frame -->
+      <rect x="-24" y="-32" width="48" height="64" rx="8" fill="#1e293b"/>
+      <rect x="-20" y="-28" width="40" height="56" rx="6" fill="#0f172a"/>
+
+      <!-- Red Rocker Switch Body (Depressed in 'ON' position) -->
+      <rect x="-16" y="-24" width="32" height="48" rx="4" fill="url(#switch-red-grad)"/>
+
+      <!-- Neon Light Core & Glow -->
+      <ellipse cx="0" cy="-6" rx="8" ry="12" fill="#fecaca" filter="url(#neon-glow)"/>
+      <circle cx="0" cy="-6" r="4" fill="#ffffff"/>
+
+      <!-- I / O Switch Markings -->
+      <text x="0" y="-12" font-family="Arial, sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">|</text>
+      <text x="0" y="16" font-family="Arial, sans-serif" font-size="9" font-weight="900" fill="#fee2e2" text-anchor="middle">O</text>
+      <text x="0" y="38" font-family="Arial, sans-serif" font-size="6.5" font-weight="800" fill="#475569" text-anchor="middle">POWER</text>
+    </g>
+
+    <!-- Red Reset / Fuse Button -->
+    <g transform="translate(-142, 5)">
+      <circle cx="0" cy="0" r="12" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="8" fill="#ef4444"/>
+      <text x="0" y="22" font-family="Arial, sans-serif" font-size="5.5" font-weight="800" fill="#64748b" text-anchor="middle">RESET</text>
+    </g>
+
+    <!-- ==================== 4 UNIVERSAL INDIAN 3-PIN SOCKETS ==================== -->
+
+    <!-- SOCKET 1 -->
+    <g transform="translate(-75, 4)">
+      <!-- Recessed Square Well -->
+      <rect x="-38" y="-38" width="76" height="76" rx="14" fill="url(#socket-recess)" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="-35" y="-35" width="70" height="70" rx="12" fill="#f8fafc"/>
+
+      <!-- Earth Pin (Top Large Round) -->
+      <circle cx="0" cy="-18" r="7" fill="#1e293b"/>
+      <circle cx="0" cy="-18" r="5" fill="#0f172a"/>
+      <!-- Safety Shutter Red Line -->
+      <line x1="-3" y1="-18" x2="3" y2="-18" stroke="#ef4444" stroke-width="1.5"/>
+
+      <!-- Neutral Pin (Bottom Left) -->
+      <ellipse cx="-16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="-16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Live Pin (Bottom Right) -->
+      <ellipse cx="16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Universal Flat Pin Slots (US/Euro dual support) -->
+      <rect x="-18" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+      <rect x="14" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+
+      <text x="0" y="32" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8" text-anchor="middle">SOCKET 1</text>
+    </g>
+
+    <!-- SOCKET 2 -->
+    <g transform="translate(15, 4)">
+      <rect x="-38" y="-38" width="76" height="76" rx="14" fill="url(#socket-recess)" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="-35" y="-35" width="70" height="70" rx="12" fill="#f8fafc"/>
+
+      <!-- Earth Pin -->
+      <circle cx="0" cy="-18" r="7" fill="#1e293b"/>
+      <circle cx="0" cy="-18" r="5" fill="#0f172a"/>
+      <line x1="-3" y1="-18" x2="3" y2="-18" stroke="#ef4444" stroke-width="1.5"/>
+
+      <!-- Neutral Pin -->
+      <ellipse cx="-16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="-16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Live Pin -->
+      <ellipse cx="16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Universal Slots -->
+      <rect x="-18" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+      <rect x="14" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+
+      <text x="0" y="32" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8" text-anchor="middle">SOCKET 2</text>
+    </g>
+
+    <!-- SOCKET 3 -->
+    <g transform="translate(105, 4)">
+      <rect x="-38" y="-38" width="76" height="76" rx="14" fill="url(#socket-recess)" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="-35" y="-35" width="70" height="70" rx="12" fill="#f8fafc"/>
+
+      <!-- Earth Pin -->
+      <circle cx="0" cy="-18" r="7" fill="#1e293b"/>
+      <circle cx="0" cy="-18" r="5" fill="#0f172a"/>
+      <line x1="-3" y1="-18" x2="3" y2="-18" stroke="#ef4444" stroke-width="1.5"/>
+
+      <!-- Neutral Pin -->
+      <ellipse cx="-16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="-16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Live Pin -->
+      <ellipse cx="16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Universal Slots -->
+      <rect x="-18" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+      <rect x="14" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+
+      <text x="0" y="32" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8" text-anchor="middle">SOCKET 3</text>
+    </g>
+
+    <!-- SOCKET 4 -->
+    <g transform="translate(195, 4)">
+      <rect x="-38" y="-38" width="76" height="76" rx="14" fill="url(#socket-recess)" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="-35" y="-35" width="70" height="70" rx="12" fill="#f8fafc"/>
+
+      <!-- Earth Pin -->
+      <circle cx="0" cy="-18" r="7" fill="#1e293b"/>
+      <circle cx="0" cy="-18" r="5" fill="#0f172a"/>
+      <line x1="-3" y1="-18" x2="3" y2="-18" stroke="#ef4444" stroke-width="1.5"/>
+
+      <!-- Neutral Pin -->
+      <ellipse cx="-16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="-16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Live Pin -->
+      <ellipse cx="16" cy="12" rx="4.5" ry="6" fill="#1e293b"/>
+      <ellipse cx="16" cy="12" rx="3" ry="4.5" fill="#0f172a"/>
+
+      <!-- Universal Slots -->
+      <rect x="-18" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+      <rect x="14" y="2" width="4" height="16" rx="1" fill="#1e293b"/>
+
+      <text x="0" y="32" font-family="Arial, sans-serif" font-size="6" font-weight="700" fill="#94a3b8" text-anchor="middle">SOCKET 4</text>
+    </g>
+
+    <!-- Quality & ISI Safety Standard Mark (Right end) -->
+    <g transform="translate(242, -50)">
+      <rect x="0" y="0" width="32" height="22" rx="3" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+      <text x="16" y="9" font-family="Arial, sans-serif" font-size="5" font-weight="900" fill="#0f172a" text-anchor="middle">ISI</text>
+      <text x="16" y="16" font-family="Arial, sans-serif" font-size="4" font-weight="700" fill="#475569" text-anchor="middle">CERTIFIED</text>
+    </g>
+  </g>
+
+  <!-- Product Specifications Overlay Tag (Modern & Professional) -->
+  <g transform="translate(400, 755)">
+    <rect x="-210" y="-18" width="420" height="34" rx="17" fill="#0f172a"/>
+    <text x="0" y="4" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="800" fill="#f8fafc" text-anchor="middle" letter-spacing="0.5">
+      4-SOCKET EXTENSION BOARD • SWITCH &amp; SURGE PROTECTOR
+    </text>
+  </g>
+</svg>

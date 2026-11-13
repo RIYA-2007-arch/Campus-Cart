@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 780" width="1140" height="780">
+  <defs>
+    <style>* { font-family: 'Segoe UI', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="1140" height="780" fill="#ffffff"/>
+  <rect x="15" y="15" width="1110" height="750" fill="none" stroke="#0f172a" stroke-width="2.2"/>
+
+  <!-- Header -->
+  <rect x="28" y="28" width="1084" height="50" rx="4" fill="#f8fafc" stroke="#0f172a" stroke-width="1.6"/>
+  <text x="570" y="52" font-size="18px" font-weight="bold" fill="#0f172a" text-anchor="middle">CAMPUSCART — CONCEPTUAL ER DIAGRAM (CHEN NOTATION)</text>
+  <text x="570" y="70" font-size="12px" fill="#475569" text-anchor="middle">Entities [Rectangles], Relationships [Diamonds], Attributes [Ovals], Primary Keys [Underlined]</text>
+
+  
+    <!-- ================= ATTRIBUTE CONNECTOR LINES ================= -->
+    <!-- USER Attributes -->
+    <line x1="250" y1="280" x2="120" y2="180" stroke="#475569" stroke-width="1.5"/>
+    <line x1="250" y1="280" x2="210" y2="145" stroke="#475569" stroke-width="1.5"/>
+    <line x1="250" y1="280" x2="335" y2="145" stroke="#475569" stroke-width="1.5"/>
+    <line x1="250" y1="280" x2="95" y2="260" stroke="#475569" stroke-width="1.5"/>
+    <line x1="250" y1="280" x2="95" y2="330" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- PRODUCT Attributes -->
+    <line x1="580" y1="280" x2="500" y2="145" stroke="#475569" stroke-width="1.5"/>
+    <line x1="580" y1="280" x2="625" y2="145" stroke="#475569" stroke-width="1.5"/>
+    <line x1="580" y1="280" x2="735" y2="175" stroke="#475569" stroke-width="1.5"/>
+    <line x1="580" y1="280" x2="735" y2="230" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- CATEGORY Attributes -->
+    <line x1="940" y1="280" x2="940" y2="175" stroke="#475569" stroke-width="1.5"/>
+    <line x1="940" y1="280" x2="1045" y2="220" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- ORDER Attributes -->
+    <line x1="580" y1="530" x2="450" y2="645" stroke="#475569" stroke-width="1.5"/>
+    <line x1="580" y1="530" x2="580" y2="665" stroke="#475569" stroke-width="1.5"/>
+    <line x1="580" y1="530" x2="710" y2="645" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- HANDOVER OTP Attributes -->
+    <line x1="940" y1="530" x2="940" y2="650" stroke="#475569" stroke-width="1.5"/>
+    <line x1="940" y1="530" x2="1045" y2="610" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- WISHLIST / CHAT / REPORT lines -->
+    <line x1="250" y1="530" x2="115" y2="635" stroke="#475569" stroke-width="1.5"/>
+    <line x1="250" y1="530" x2="250" y2="655" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- ================= RELATIONSHIP LINES ================= -->
+    <!-- USER - Lists - PRODUCT -->
+    <line x1="325" y1="280" x2="505" y2="280" stroke="#0f172a" stroke-width="2.2"/>
+    
+    <!-- PRODUCT - Belongs To - CATEGORY -->
+    <line x1="655" y1="280" x2="865" y2="280" stroke="#0f172a" stroke-width="2.2"/>
+
+    <!-- USER - Places - ORDER -->
+    <path d="M 250 304 L 250 430 L 505 530" stroke="#0f172a" stroke-width="2.2" fill="none"/>
+
+    <!-- PRODUCT - Included In - ORDER -->
+    <line x1="580" y1="304" x2="580" y2="506" stroke="#0f172a" stroke-width="2.2"/>
+
+    <!-- ORDER - Verified By - HANDOVER_OTP -->
+    <line x1="655" y1="530" x2="865" y2="530" stroke="#0f172a" stroke-width="2.2"/>
+
+    <!-- USER - Saves - WISHLIST -->
+    <line x1="250" y1="304" x2="250" y2="506" stroke="#0f172a" stroke-width="2.2"/>
+
+    <!-- WISHLIST - Targets - PRODUCT -->
+    <line x1="325" y1="515" x2="505" y2="295" stroke="#0f172a" stroke-width="2.0" stroke-dasharray="5,3"/>
+
+    <!-- ================= ENTITIES ================= -->
+    
+    <g>
+      <rect x="175" y="256" width="150" height="48" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.4" rx="4"/>
+      <text x="250" y="285" font-size="14px" font-weight="bold" fill="#0f172a" text-anchor="middle">USER (Student)</text>
+    </g>
+    
+    <g>
+      <rect x="505" y="256" width="150" height="48" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.4" rx="4"/>
+      <text x="580" y="285" font-size="14px" font-weight="bold" fill="#0f172a" text-anchor="middle">PRODUCT</text>
+    </g>
+    
+    <g>
+      <rect x="865" y="256" width="150" height="48" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.4" rx="4"/>
+      <text x="940" y="285" font-size="14px" font-weight="bold" fill="#0f172a" text-anchor="middle">CATEGORY</text>
+    </g>
+    
+    <g>
+      <rect x="505" y="506" width="150" height="48" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.4" rx="4"/>
+      <text x="580" y="535" font-size="14px" font-weight="bold" fill="#0f172a" text-anchor="middle">ORDER</text>
+    </g>
+    
+    <g>
+      <rect x="860" y="506" width="160" height="48" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.4" rx="4"/>
+      <text x="940" y="535" font-size="14px" font-weight="bold" fill="#0f172a" text-anchor="middle">HANDOVER_OTP</text>
+    </g>
+    
+    <g>
+      <rect x="172.5" y="506" width="155" height="48" fill="#e2e8f0" stroke="#0f172a" stroke-width="2.4" rx="4"/>
+      <text x="250" y="535" font-size="14px" font-weight="bold" fill="#0f172a" text-anchor="middle">WISHLIST / CHAT</text>
+    </g>
+
+    <!-- ================= RELATIONSHIPS (DIAMONDS) ================= -->
+    
+    <g>
+      <polygon points="415,252 470,280 415,308 360,280" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+      <text x="415" y="285" font-size="13px" font-weight="bold" fill="#0f172a" text-anchor="middle">Lists</text>
+    </g>
+    
+    <g>
+      <polygon points="760,252 820,280 760,308 700,280" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+      <text x="760" y="285" font-size="13px" font-weight="bold" fill="#0f172a" text-anchor="middle">Belongs To</text>
+    </g>
+    
+    <g>
+      <polygon points="360,443 412.5,470 360,497 307.5,470" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+      <text x="360" y="475" font-size="13px" font-weight="bold" fill="#0f172a" text-anchor="middle">Places</text>
+    </g>
+    
+    <g>
+      <polygon points="580,377 637.5,405 580,433 522.5,405" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+      <text x="580" y="410" font-size="13px" font-weight="bold" fill="#0f172a" text-anchor="middle">Includes</text>
+    </g>
+    
+    <g>
+      <polygon points="760,501 822.5,530 760,559 697.5,530" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+      <text x="760" y="535" font-size="13px" font-weight="bold" fill="#0f172a" text-anchor="middle">Verified By</text>
+    </g>
+    
+    <g>
+      <polygon points="250,378 305,405 250,432 195,405" fill="#ffffff" stroke="#0f172a" stroke-width="2.2"/>
+      <text x="250" y="410" font-size="13px" font-weight="bold" fill="#0f172a" text-anchor="middle">Creates</text>
+    </g>
+
+    <!-- ================= CARDINALITIES ================= -->
+    
+    <rect x="334" y="270" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="345" y="284" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="474" y="270" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="485" y="284" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">N</text>
+    
+    <rect x="664" y="270" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="675" y="284" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">N</text>
+    
+    <rect x="834" y="270" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="845" y="284" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="269" y="435" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="280" y="449" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="469" y="510" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="480" y="524" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">N</text>
+    
+    <rect x="569" y="315" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="580" y="329" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="569" y="475" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="580" y="489" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">N</text>
+    
+    <rect x="664" y="520" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="675" y="534" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="834" y="520" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="845" y="534" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="239" y="315" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="250" y="329" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">1</text>
+    
+    <rect x="239" y="475" width="22" height="20" rx="4" fill="#ffffff" stroke="#0f172a" stroke-width="1.2"/>
+    <text x="250" y="489" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="middle">N</text>
+
+    <!-- ================= ATTRIBUTES (OVALS) ================= -->
+    <!-- User -->
+    
+    <g>
+      <ellipse cx="110" cy="175" rx="50" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="110" y="179" font-size="11.5px" font-weight="bold" text-decoration="underline" fill="#0f172a" text-anchor="middle">user_id</text>
+    </g>
+    
+    <g>
+      <ellipse cx="210" cy="138" rx="52" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="210" y="142" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">full_name</text>
+    </g>
+    
+    <g>
+      <ellipse cx="335" cy="138" rx="48" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="335" y="142" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">email</text>
+    </g>
+    
+    <g>
+      <ellipse cx="85" cy="258" rx="48" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="85" y="262" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">college</text>
+    </g>
+    
+    <g>
+      <ellipse cx="85" cy="330" rx="44" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="85" y="334" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">role</text>
+    </g>
+
+    <!-- Product -->
+    
+    <g>
+      <ellipse cx="500" cy="138" rx="54" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="500" y="142" font-size="11.5px" font-weight="bold" text-decoration="underline" fill="#0f172a" text-anchor="middle">product_id</text>
+    </g>
+    
+    <g>
+      <ellipse cx="625" cy="138" rx="62" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="625" y="142" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">product_name</text>
+    </g>
+    
+    <g>
+      <ellipse cx="745" cy="175" rx="44" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="745" y="179" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">price</text>
+    </g>
+    
+    <g>
+      <ellipse cx="745" cy="230" rx="46" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="745" y="234" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">status</text>
+    </g>
+
+    <!-- Category -->
+    
+    <g>
+      <ellipse cx="940" cy="168" rx="58" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="940" y="172" font-size="11.5px" font-weight="bold" text-decoration="underline" fill="#0f172a" text-anchor="middle">category_id</text>
+    </g>
+    
+    <g>
+      <ellipse cx="1050" cy="220" rx="64" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="1050" y="224" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">category_name</text>
+    </g>
+
+    <!-- Order -->
+    
+    <g>
+      <ellipse cx="445" cy="650" rx="50" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="445" y="654" font-size="11.5px" font-weight="bold" text-decoration="underline" fill="#0f172a" text-anchor="middle">order_id</text>
+    </g>
+    
+    <g>
+      <ellipse cx="580" cy="670" rx="48" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="580" y="674" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">amount</text>
+    </g>
+    
+    <g>
+      <ellipse cx="715" cy="650" rx="62" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="715" y="654" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">payment_mode</text>
+    </g>
+
+    <!-- Handover OTP -->
+    
+    <g>
+      <ellipse cx="940" cy="655" rx="52" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="940" y="659" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">otp_hash</text>
+    </g>
+    
+    <g>
+      <ellipse cx="1050" cy="610" rx="52" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="1050" y="614" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">completed</text>
+    </g>
+
+    <!-- Wishlist / Chat -->
+    
+    <g>
+      <ellipse cx="110" cy="640" rx="56" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="110" y="644" font-size="11.5px" font-weight="bold" text-decoration="underline" fill="#0f172a" text-anchor="middle">room_id / id</text>
+    </g>
+    
+    <g>
+      <ellipse cx="250" cy="660" rx="50" ry="18" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+      <text x="250" y="664" font-size="11.5px" font-weight="600" text-decoration="none" fill="#0f172a" text-anchor="middle">message</text>
+    </g>
+  
+
+  <!-- Footer -->
+  <rect x="28" y="738" width="1084" height="28" rx="4" fill="#f8fafc" stroke="#0f172a" stroke-width="1.2"/>
+  <text x="45" y="756" font-size="12px" font-weight="bold" fill="#0f172a">Notation: Peter Chen ER Standard (Academic Report Format)</text>
+  <text x="1095" y="756" font-size="12px" font-weight="bold" fill="#0f172a" text-anchor="end">CampusCart System</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="coverGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="spiralMetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="35%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="bookShadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="5" dy="7" stdDeviation="8" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- Desk Background -->
+  <rect width="600" height="450" fill="url(#bgGrad)"/>
+  <line x1="0" y1="120" x2="600" y2="120" stroke="#cbd5e1" stroke-width="0.5" stroke-dasharray="8 12"/>
+  <line x1="0" y1="280" x2="600" y2="280" stroke="#cbd5e1" stroke-width="0.5" stroke-dasharray="12 16"/>
+
+  <!-- Notebook Body -->
+  <g filter="url(#bookShadow)">
+    <rect x="56" y="24" width="492" height="402" rx="14" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="54" y="22" width="492" height="402" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <rect x="50" y="20" width="492" height="402" rx="14" fill="url(#coverGrad)"/>
+  </g>
+
+  <rect x="50" y="20" width="44" height="402" rx="6" fill="#000000" opacity="0.12"/>
+  <line x1="94" y1="20" x2="94" y2="422" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1.5"/>
+
+  <rect x="52" y="41" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="61" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="81" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="101" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="121" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="141" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="161" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="181" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="201" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="221" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="241" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="261" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="281" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="301" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="321" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="341" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="361" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="381" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/><rect x="52" y="401" width="12" height="8" rx="2" fill="#0f172a" opacity="0.6"/>
+  <path d="M 38 41 C 28 37, 28 53, 58 51 C 66 50, 66 43, 56 41 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 61 C 28 57, 28 73, 58 71 C 66 70, 66 63, 56 61 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 81 C 28 77, 28 93, 58 91 C 66 90, 66 83, 56 81 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 101 C 28 97, 28 113, 58 111 C 66 110, 66 103, 56 101 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 121 C 28 117, 28 133, 58 131 C 66 130, 66 123, 56 121 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 141 C 28 137, 28 153, 58 151 C 66 150, 66 143, 56 141 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 161 C 28 157, 28 173, 58 171 C 66 170, 66 163, 56 161 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 181 C 28 177, 28 193, 58 191 C 66 190, 66 183, 56 181 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 201 C 28 197, 28 213, 58 211 C 66 210, 66 203, 56 201 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 221 C 28 217, 28 233, 58 231 C 66 230, 66 223, 56 221 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 241 C 28 237, 28 253, 58 251 C 66 250, 66 243, 56 241 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 261 C 28 257, 28 273, 58 271 C 66 270, 66 263, 56 261 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 281 C 28 277, 28 293, 58 291 C 66 290, 66 283, 56 281 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 301 C 28 297, 28 313, 58 311 C 66 310, 66 303, 56 301 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 321 C 28 317, 28 333, 58 331 C 66 330, 66 323, 56 321 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 341 C 28 337, 28 353, 58 351 C 66 350, 66 343, 56 341 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 361 C 28 357, 28 373, 58 371 C 66 370, 66 363, 56 361 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 381 C 28 377, 28 393, 58 391 C 66 390, 66 383, 56 381 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/><path d="M 38 401 C 28 397, 28 413, 58 411 C 66 410, 66 403, 56 401 Z" fill="url(#spiralMetal)" stroke="#475569" stroke-width="0.75"/>
+
+  <g transform="translate(115, 60)">
+    <rect width="400" height="230" rx="10" fill="#ffffff" filter="drop-shadow(0 3px 6px rgba(0,0,0,0.15))"/>
+    <rect width="400" height="34" rx="10" fill="#047857"/>
+    <rect y="24" width="400" height="10" fill="#047857"/>
+    <text x="200" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="13" fill="#ffffff" text-anchor="middle" letter-spacing="2">ALL SUBJECTS MEGA BUNDLE</text>
+    
+    <line x1="20" y1="80" x2="380" y2="80" stroke="#e2e8f0" stroke-width="1"/>
+    <line x1="20" y1="130" x2="380" y2="130" stroke="#e2e8f0" stroke-width="1"/>
+    <line x1="20" y1="180" x2="380" y2="180" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <text x="200" y="90" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22" fill="#0f172a" text-anchor="middle">B.TECH CSE · SEM 4 BUNDLE</text>
+    <text x="200" y="120" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="13" fill="#475569" text-anchor="middle">DBMS, OS, DAA, Discrete Maths, Java</text>
+    
+    <rect x="50" y="150" width="300" height="30" rx="15" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="200" y="170" font-family="'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="12" fill="#047857" text-anchor="middle">5-SUBJECTS COMPLETE COMBO</text>
+    
+    <circle cx="350" cy="200" r="14" fill="#22c55e" opacity="0.15"/>
+    <text x="350" y="204" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#15803d" text-anchor="middle">✓ USED</text>
+  </g>
+
+  <g transform="translate(360, 310) rotate(-4)">
+    <rect width="130" height="85" rx="3" fill="#fef08a" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.18))"/>
+    <rect width="130" height="14" fill="#facc15" opacity="0.6"/>
+    <text x="65" y="42" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="15" font-weight="700" fill="#713f12" text-anchor="middle">Clean &amp; Complete</text>
+    <text x="65" y="65" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="14" font-weight="700" fill="#713f12" text-anchor="middle">Exam Ready ⭐</text>
+  </g>
+</svg>

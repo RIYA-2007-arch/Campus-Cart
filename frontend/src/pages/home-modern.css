@@ -1,0 +1,496 @@
+/* =========================================================
+   CAMPUSCART HOME PAGE — VIVA & UNITED DEALS MODERN AESTHETIC
+   - Warm Yellow (#F59E0B) & Pure White Palette (Zero harsh blue)
+   - Interactive Active Pill Tabs (OLX/Viva Category switching)
+   - High-end Product Cards, Badges, and Hover Animations
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap');
+
+.viva-home-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 16px 20px 60px;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+}
+
+/* ── 1. Hero Promo Banner (Warm Cream with Animated Color-Changing Glowing Border Outline) ── */
+@keyframes borderRotateGlow {
+  0% {
+    border-color: #f59e0b;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.38), 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  20% {
+    border-color: #ef4444;
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.38), 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  40% {
+    border-color: #ec4899;
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.38), 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  60% {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.38), 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  80% {
+    border-color: #10b981;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.38), 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+  100% {
+    border-color: #f59e0b;
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.38), 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.viva-hero-banner {
+  background: linear-gradient(135deg, #fdfbf7 0%, #f8f2e4 60%, #f3e9d2 100%);
+  border: 3px solid #f59e0b;
+  border-radius: 24px;
+  padding: 40px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  animation: borderRotateGlow 5s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.viva-hero-banner::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (max-width: 860px) {
+  .viva-hero-banner {
+    flex-direction: column;
+    padding: 28px 20px;
+    text-align: center;
+  }
+}
+
+.viva-hero-content {
+  max-width: 650px;
+}
+
+.viva-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1.5px solid #f59e0b;
+  color: #b45309;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+  margin-bottom: 16px;
+}
+
+.viva-hero-title {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #18181b;
+  margin: 0 0 12px;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+}
+
+.viva-text-gold {
+  color: #d97706;
+}
+
+@media (max-width: 640px) {
+  .viva-hero-title {
+    font-size: 2rem;
+  }
+}
+
+.viva-hero-desc {
+  font-size: 1.02rem;
+  color: #52525b;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.viva-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .viva-hero-actions {
+    justify-content: center;
+  }
+}
+
+.viva-btn-primary {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  color: #fbbf24;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 800;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  border: 1.5px solid #f59e0b;
+  box-shadow: 0 6px 20px rgba(24, 24, 27, 0.2);
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viva-btn-primary:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.35);
+}
+
+.viva-btn-secondary {
+  background: #ffffff;
+  color: #18181b;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 800;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  border: 1.5px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.22s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.viva-btn-secondary:hover {
+  border-color: #f59e0b;
+  color: #b45309;
+  background: #faf6ee;
+  transform: translateY(-2px);
+}
+
+.viva-hero-decor {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.viva-hero-badge-card {
+  background: #ffffff;
+  border: 1.5px solid #ebd8b7;
+  border-radius: 18px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.12);
+  min-width: 220px;
+}
+
+.viva-hero-badge-card.highlight {
+  border-color: #f59e0b;
+  background: #fffdf5;
+}
+
+.viva-hero-badge-icon {
+  font-size: 1.8rem;
+  background: #f6edd9;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.viva-hero-badge-card strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #18181b;
+}
+
+.viva-hero-badge-card p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #71717a;
+}
+
+/* ── 2. Category Ribbon with Interactive Switching (OLX / Viva Style) ── */
+.viva-category-strip {
+  margin-bottom: 30px;
+  background: #ffffff;
+  border: 1.5px solid #ebd8b7;
+  border-radius: 20px;
+  padding: 16px 20px;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.08);
+}
+
+.viva-strip-scroll {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 4px 0;
+}
+
+.viva-strip-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.viva-cat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 16px;
+  transition: all 0.22s ease;
+  flex-shrink: 0;
+  min-width: 90px;
+  outline: none;
+}
+
+.viva-cat-pill:hover {
+  background: #fef9c3;
+  transform: translateY(-2px);
+}
+
+.viva-cat-pill.active {
+  background: #f6edd9;
+  border: 1.5px solid #f59e0b;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.viva-cat-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #faf6ee;
+  border: 1.5px solid #d97706;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.12);
+  transition: all 0.22s ease;
+}
+
+.viva-cat-pill:hover .viva-cat-icon-circle,
+.viva-cat-pill.active .viva-cat-icon-circle {
+  background: #f59e0b;
+  border-color: #d97706;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.viva-cat-name {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #334155;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.viva-cat-pill.active .viva-cat-name {
+  color: #b45309;
+}
+
+/* ── 3. Quick Feature Showcase Cards (Amazon/Viva 3-Box Row) ── */
+.viva-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 860px) {
+  .viva-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.viva-feature-card {
+  background: #ffffff;
+  border: 1.5px solid #ebd8b7;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.22s ease;
+}
+
+.viva-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #f59e0b;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.2);
+}
+
+.viva-feature-card.warm {
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf0 100%);
+  border-color: #f59e0b;
+}
+
+.viva-feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.viva-feature-header h3 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.viva-feature-badge {
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.viva-feature-badge.gold {
+  background: #f6edd9;
+  color: #b45309;
+  border: 1px solid #d97706;
+}
+
+.viva-feature-text {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.viva-feature-link {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #b45309;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.viva-feature-link:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+
+/* ── 4. Main Products Shelf & Grid (Yellow Accent) ── */
+.viva-shelf-section {
+  margin-bottom: 44px;
+}
+
+.viva-shelf-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f6edd9;
+}
+
+.viva-shelf-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #b45309;
+  background: #f6edd9;
+  border: 1px solid #d97706;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.viva-shelf-title {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.viva-shelf-more {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #b45309;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.viva-shelf-more:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+
+.viva-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .viva-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+  }
+}
+
+.viva-loading-state,
+.viva-error-state,
+.viva-empty {
+  text-align: center;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1.5px solid #ebd8b7;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.viva-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #d97706;
+  border-top-color: #d97706;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 12px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

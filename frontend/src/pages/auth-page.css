@@ -1,0 +1,525 @@
+/* =========================================================
+   CAMPUSCART AUTH PAGE — Logo Gold + Obsidian Dark Theme
+   - New AKS Campus Photo (Sunny Day, Blue Sky, Sharp)
+   - Golden Amber (#D97706) + Obsidian (#18181B) palette matching logo
+   - Classical Roman/Cinzel typography
+   - Compact form card, bigger logo
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ── Root ───────────────────────────────────────────────── */
+.auth-roman-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: 'Times New Roman', Times, 'Georgia', serif;
+  color: #18181B;
+  background-color: #e8e3d8;
+}
+
+/* ── Background: AKS Campus Aerial Photo (Landscape, Full Cover) ── */
+.auth-campus-photo-layer {
+  position: fixed;
+  inset: 0;
+  background-image: url('/aks-campus.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: none !important;
+  transform: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Overlay: Cool white tint matching white building + grey sky ── */
+.auth-clear-light-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.30) 0%,
+    rgba(220, 230, 240, 0.22) 50%,
+    rgba(200, 215, 230, 0.35) 100%
+  );
+  backdrop-filter: none;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Navbar ─────────────────────────────────────────────── */
+.auth-top-navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .auth-top-navbar {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Logo pill — bigger, gold-bordered */
+.auth-official-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 8px 20px 8px 14px;
+  border-radius: 16px;
+  border: 2px solid #D97706;             /* amber gold border like logo */
+  box-shadow: 0 4px 18px rgba(180, 83, 9, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-official-brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(180, 83, 9, 0.26);
+}
+
+/* BIGGER logo */
+.auth-official-logo {
+  height: 62px;           /* was 48px → now 62px */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .auth-official-logo { height: 50px; }
+}
+
+/* Nav links pill */
+.auth-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(24, 24, 27, 0.82);   /* obsidian dark */
+  padding: 6px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+@media (max-width: 768px) {
+  .auth-nav-menu { flex-wrap: wrap; justify-content: center; border-radius: 16px; }
+}
+
+.auth-nav-link {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FDE68A;                        /* warm gold text */
+  text-decoration: none;
+  padding: 7px 12px;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.auth-nav-link:hover {
+  color: #FFFBEB;
+  background: rgba(217, 119, 6, 0.25);
+}
+
+.auth-nav-link.active {
+  color: #18181B;
+  background: linear-gradient(135deg, #FDE047, #F59E0B);
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.45);
+}
+
+/* ── Center Stage ───────────────────────────────────────── */
+.auth-center-stage {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 16px 40px;
+}
+
+/* COMPACT form card */
+.auth-roman-card {
+  background: rgba(255, 255, 255, 0.97);
+  border: 2px solid #FDE68A;             /* gold border matching logo */
+  border-radius: 20px;
+  box-shadow:
+    0 20px 50px -10px rgba(24, 24, 27, 0.32),
+    0 0 0 1px rgba(245, 158, 11, 0.12);
+  width: 100%;
+  max-width: 430px;                      /* was 490px → compact 430px */
+  padding: 28px 28px 32px;              /* tighter padding */
+  transition: transform 0.25s ease;
+}
+
+@media (max-width: 480px) {
+  .auth-roman-card { padding: 22px 16px; border-radius: 18px; }
+}
+
+/* ── Card Title & Typography ────────────────────────────── */
+.auth-card-head {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #FDE68A;     /* gold divider line */
+  padding-bottom: 14px;
+}
+
+.auth-roman-title {
+  font-family: 'Cinzel', 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #18181B;                        /* obsidian */
+  margin: 0 0 4px;
+}
+
+.auth-roman-sub {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: #92400E;                        /* dark amber/bronze */
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ── Alert Banners ──────────────────────────────────────── */
+.auth-roman-alert {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.auth-roman-alert.error {
+  background-color: #fef2f2;
+  border: 1.5px solid #fecaca;
+  color: #b91c1c;
+}
+
+.auth-roman-alert.success {
+  background-color: #fffbeb;
+  border: 1.5px solid #fde68a;
+  color: #78350f;
+}
+
+/* ── Form Layout ────────────────────────────────────────── */
+.auth-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-input-group.half {
+  flex: 1 1 0;
+  min-width: 0;                          /* prevents overflow */
+}
+
+/* ── FIXED: Dual-row stays inside card ─────────────────── */
+.auth-input-dual-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+@media (max-width: 420px) {
+  .auth-input-dual-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+/* ── Labels ─────────────────────────────────────────────── */
+.auth-roman-label {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #18181B;
+  letter-spacing: 0.2px;
+}
+
+/* ── Pill Input Wrap ────────────────────────────────────── */
+.auth-roman-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #FAFAF5;
+  border: 1.5px solid #D97706;          /* amber gold border */
+  border-radius: 9999px;
+  padding: 3px 6px 3px 12px;
+  box-shadow: inset 0 1px 3px rgba(24, 24, 27, 0.05);
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.auth-roman-input-wrap:focus-within {
+  border-color: #B45309;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.18);
+  background: #FFFFFF;
+}
+
+.auth-input-icon {
+  font-size: 0.95rem;
+  margin-right: 8px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.auth-roman-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 9px 2px;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.92rem;
+  color: #18181B;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-roman-input::placeholder {
+  color: #A16207;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  opacity: 0.7;
+}
+
+.auth-roman-input.otp-mono {
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+/* Select Dropdown */
+.auth-roman-select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 9px 2px;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.88rem;
+  color: #18181B;
+  cursor: pointer;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Eye Toggle */
+.auth-eye-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #92400E;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.auth-eye-toggle:hover { color: #18181B; }
+
+/* ── "Verify Mail" Button inside input ──────────────────── */
+.auth-verify-action-btn {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background: linear-gradient(135deg, #18181B 0%, #27272A 100%); /* obsidian */
+  color: #FDE68A;                        /* gold text */
+  border: 1.5px solid #D97706;
+  border-radius: 9999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(24, 24, 27, 0.25);
+  transition: all 0.2s ease;
+}
+
+.auth-verify-action-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  color: #18181B;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+  transform: translateY(-1px);
+}
+
+.auth-verify-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.auth-verify-action-btn.submit-otp {
+  background: linear-gradient(135deg, #065F46, #047857);
+  color: #ECFDF5;
+  border-color: #059669;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.28);
+}
+
+.auth-verify-action-btn.submit-otp:hover:not(:disabled) {
+  background: linear-gradient(135deg, #047857, #059669);
+  transform: translateY(-1px);
+}
+
+/* OTP Input Group Highlight */
+.auth-input-group.otp-active-group {
+  background: #FFFBEB;
+  border: 1.5px dashed #F59E0B;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+/* Verified Badge */
+.auth-verified-pill {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  background: #ECFDF5;
+  border: 1.5px solid #6EE7B7;
+  color: #065F46;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 7px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ── Options Row ────────────────────────────────────────── */
+.auth-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.auth-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  color: #18181B;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+}
+
+.auth-remember-label input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: #D97706;
+  cursor: pointer;
+}
+
+.auth-forgot-link {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #92400E;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.auth-forgot-link:hover { color: #B45309; }
+
+/* ── Primary Action Button (Log In / Create Account) ────── */
+.auth-primary-btn {
+  font-family: 'Cinzel', 'Times New Roman', Times, Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #18181B 0%, #3F3F46 60%, #18181B 100%); /* obsidian */
+  color: #FDE68A;                        /* logo gold text */
+  border: 2px solid #D97706;            /* amber border */
+  border-radius: 9999px;
+  padding: 13px 28px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px -4px rgba(24, 24, 27, 0.42);
+  transition: all 0.22s ease;
+  margin-top: 4px;
+}
+
+.auth-primary-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #D97706 100%);
+  color: #18181B;
+  border-color: #B45309;
+  box-shadow: 0 12px 28px -4px rgba(217, 119, 6, 0.50);
+  transform: translateY(-2px);
+}
+
+.auth-primary-btn:active:not(:disabled) { transform: translateY(0); }
+
+.auth-primary-btn:disabled {
+  opacity: 0.50;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ── Switch Row ─────────────────────────────────────────── */
+.auth-switch-row {
+  text-align: center;
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.92rem;
+  color: #57534E;
+  margin-top: 6px;
+}
+
+.auth-switch-text-btn {
+  font-family: 'Times New Roman', Times, Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #92400E;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.auth-switch-text-btn:hover { color: #D97706; }

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; background: #ffffff; overflow: hidden; }
+    svg { width: 100%; height: 100%; display: block; }
+  </style>
+</head>
+<body>
+  <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="1600" height="1050">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');
+      * { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; }
+      .bg { fill: #ffffff; }
+      .border-academic { stroke: #000000; stroke-width: 2; fill: none; }
+      .title-main { font-size: 16pt; font-weight: bold; fill: #000000; text-anchor: middle; letter-spacing: 0.5px; }
+      .title-sub { font-size: 12pt; font-weight: normal; fill: #333333; text-anchor: middle; }
+      
+      /* External Entities (Rectangles) */
+      .entity-rect { fill: #f8fafc; stroke: #000000; stroke-width: 2; }
+      .entity-text { font-size: 12pt; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .entity-subtext { font-size: 10pt; font-style: italic; fill: #475569; text-anchor: middle; }
+
+      /* Processes (Rounded Rectangles / Circles) */
+      .proc-shape { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+      .proc-num { font-size: 12pt; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .proc-title { font-size: 12pt; font-weight: bold; fill: #000000; text-anchor: middle; }
+      .proc-divider { stroke: #000000; stroke-width: 1.5; }
+
+      /* Data Stores (Open-ended parallel lines) */
+      .store-rect { fill: #fdfdfd; stroke: #000000; stroke-width: 1.8; }
+      .store-id-box { fill: #f1f5f9; stroke: #000000; stroke-width: 1.5; }
+      .store-id-text { font-size: 12pt; font-weight: bold; fill: #000000; text-anchor: middle; font-family: 'Courier New', monospace; }
+      .store-name-text { font-size: 12pt; font-weight: bold; fill: #000000; text-anchor: start; }
+
+      /* Data Flow Arrows & 12pt Labels */
+      .flow-arrow { stroke: #000000; stroke-width: 1.6; fill: none; }
+      .label-bg { fill: #ffffff; stroke: #d1d5db; stroke-width: 0.8; rx: 4; ry: 4; }
+      .label-text { font-size: 12pt; fill: #000000; font-weight: 600; text-anchor: middle; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1600" height="1050" class="bg"/>
+
+  <!-- Academic Standard Border -->
+  <rect x="20" y="20" width="1560" height="1010" class="border-academic"/>
+  <rect x="25" y="25" width="1550" height="1000" stroke="#000000" stroke-width="0.8" fill="none"/>
+
+  <!-- Academic Header -->
+  <rect x="35" y="35" width="1530" height="65" fill="#f8fafc" stroke="#000000" stroke-width="1.5"/>
+  <text x="800" y="65" class="title-main">CAMPUSCART SYSTEM — DATA FLOW DIAGRAM — LEVEL 0 (CONTEXT DIAGRAM)</text>
+  <text x="800" y="88" class="title-sub">High-Level Boundary & External Entity Interface | Formal Standard (12pt Font Layout)</text>
+
+  <!-- ================= PROCESS 0.0 (CAMPUSCART SYSTEM) ================= -->
+  <g id="proc-0">
+    <rect x="650" y="430" width="300" height="180" rx="20" ry="20" class="proc-shape" stroke-width="2.5"/>
+    <rect x="650" y="430" width="300" height="45" rx="20" ry="20" fill="#f1f5f9" stroke="#000000" stroke-width="2"/>
+    <rect x="650" y="455" width="300" height="20" fill="#f1f5f9" stroke="none"/>
+    <line x1="650" y1="475" x2="950" y2="475" class="proc-divider"/>
+    <text x="800" y="460" class="proc-num">0.0</text>
+    <text x="800" y="510" class="proc-title" font-size="14pt">CAMPUSCART SYSTEM</text>
+    <text x="800" y="542" class="title-sub" font-size="11pt">Peer-to-Peer Campus Marketplace</text>
+    <text x="800" y="565" class="title-sub" font-size="11pt">&amp; Secure OTP Handover Engine</text>
+  </g>
+
+  <!-- ================= EXTERNAL ENTITY 1: BUYER (STUDENT) [LEFT] ================= -->
+  <g id="entity-buyer">
+    <rect x="70" y="420" width="220" height="200" class="entity-rect"/>
+    <rect x="70" y="420" width="220" height="45" fill="#e2e8f0" stroke="#000000" stroke-width="1.8"/>
+    <text x="180" y="448" class="entity-text">BUYER (STUDENT)</text>
+    <text x="180" y="495" class="entity-subtext">[External Entity]</text>
+    <text x="180" y="530" font-size="11pt" fill="#1e293b" text-anchor="middle">• Registered Student</text>
+    <text x="180" y="555" font-size="11pt" fill="#1e293b" text-anchor="middle">• Browse &amp; Purchase</text>
+    <text x="180" y="580" font-size="11pt" fill="#1e293b" text-anchor="middle">• Collects via Handover OTP</text>
+  </g>
+
+  <!-- ================= EXTERNAL ENTITY 2: SELLER (STUDENT) [RIGHT] ================= -->
+  <g id="entity-seller">
+    <rect x="1310" y="420" width="220" height="200" class="entity-rect"/>
+    <rect x="1310" y="420" width="220" height="45" fill="#e2e8f0" stroke="#000000" stroke-width="1.8"/>
+    <text x="1420" y="448" class="entity-text">SELLER (STUDENT)</text>
+    <text x="1420" y="495" class="entity-subtext">[External Entity]</text>
+    <text x="1420" y="530" font-size="11pt" fill="#1e293b" text-anchor="middle">• Verified Campus Student</text>
+    <text x="1420" y="555" font-size="11pt" fill="#1e293b" text-anchor="middle">• Lists Used Study Items</text>
+    <text x="1420" y="580" font-size="11pt" fill="#1e293b" text-anchor="middle">• Verifies Handover OTP</text>
+  </g>
+
+  <!-- ================= EXTERNAL ENTITY 3: CARTMATE AI (TOP) ================= -->
+  <g id="entity-gemini">
+    <rect x="650" y="140" width="300" height="120" class="entity-rect"/>
+    <rect x="650" y="140" width="300" height="40" fill="#e2e8f0" stroke="#000000" stroke-width="1.8"/>
+    <text x="800" y="166" class="entity-text">CARTMATE AI SERVICE</text>
+    <text x="800" y="200" class="entity-subtext">[Gemini AI Natural Language Assistant]</text>
+    <text x="800" y="225" font-size="11pt" fill="#1e293b" text-anchor="middle">• Semantic Product Recommendations</text>
+    <text x="800" y="245" font-size="11pt" fill="#1e293b" text-anchor="middle">• Syllabus &amp; Pricing Guidance</text>
+  </g>
+
+  <!-- ================= EXTERNAL ENTITY 4: ADMINISTRATOR (BOTTOM) ================= -->
+  <g id="entity-admin">
+    <rect x="650" y="780" width="300" height="120" class="entity-rect"/>
+    <rect x="650" y="780" width="300" height="40" fill="#e2e8f0" stroke="#000000" stroke-width="1.8"/>
+    <text x="800" y="806" class="entity-text">SYSTEM ADMINISTRATOR</text>
+    <text x="800" y="840" class="entity-subtext">[University Campus Admin]</text>
+    <text x="800" y="865" font-size="11pt" fill="#1e293b" text-anchor="middle">• User &amp; Product Safety Moderation</text>
+    <text x="800" y="885" font-size="11pt" fill="#1e293b" text-anchor="middle">• Campus Domain &amp; Audit Oversight</text>
+  </g>
+
+  <!-- ================= DATA FLOW ARROWS (12pt Font Standard) ================= -->
+
+  <!-- BUYER -> SYSTEM -->
+  <!-- 1. Reg / Login -->
+  <path d="M 290 460 Q 480 430 650 480" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="360" y="420" width="220" height="26" class="label-bg"/>
+  <text x="470" y="438" class="label-text">1. User Credentials &amp; Profile</text>
+
+  <!-- 2. Search & Filter -->
+  <path d="M 290 510 L 650 510" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="370" y="497" width="200" height="26" class="label-bg"/>
+  <text x="470" y="515" class="label-text">2. Product Search Queries</text>
+
+  <!-- 3. Order & Meetup Handover -->
+  <path d="M 290 560 Q 480 570 650 545" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="350" y="555" width="240" height="26" class="label-bg"/>
+  <text x="470" y="573" class="label-text">3. Order Request &amp; Handover OTP</text>
+
+  <!-- SYSTEM -> BUYER -->
+  <!-- 4. Responses to Buyer -->
+  <path d="M 650 580 Q 480 620 290 590" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="350" y="605" width="250" height="26" class="label-bg"/>
+  <text x="475" y="623" class="label-text">4. Dynamic UPI QR &amp; Product Catalog</text>
+
+  <!-- SELLER -> SYSTEM -->
+  <!-- 5. Product Listing -->
+  <path d="M 1310 460 Q 1120 430 950 480" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="1030" y="420" width="210" height="26" class="label-bg"/>
+  <text x="1135" y="438" class="label-text">5. Product Listing &amp; Photos</text>
+
+  <!-- 6. OTP Verification by Seller -->
+  <path d="M 1310 510 L 950 510" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="1025" y="497" width="220" height="26" class="label-bg"/>
+  <text x="1135" y="515" class="label-text">6. Handover OTP Verification</text>
+
+  <!-- SYSTEM -> SELLER -->
+  <!-- 7. Order notification & confirmation -->
+  <path d="M 950 560 Q 1120 580 1310 560" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="1020" y="565" width="230" height="26" class="label-bg"/>
+  <text x="1135" y="583" class="label-text">7. Order Notification &amp; SOLD State</text>
+
+  <!-- TOP: CARTMATE AI <-> SYSTEM -->
+  <!-- System -> AI -->
+  <path d="M 750 430 L 750 260" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="580" y="325" width="160" height="26" class="label-bg"/>
+  <text x="660" y="343" class="label-text">Student Query &amp; Intent</text>
+
+  <!-- AI -> System -->
+  <path d="M 850 260 L 850 430" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="860" y="325" width="180" height="26" class="label-bg"/>
+  <text x="950" y="343" class="label-text">Catalog Recommendation</text>
+
+  <!-- BOTTOM: ADMIN <-> SYSTEM -->
+  <!-- Admin -> System -->
+  <path d="M 750 780 L 750 610" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="570" y="680" width="170" height="26" class="label-bg"/>
+  <text x="655" y="698" class="label-text">Moderation &amp; Removal</text>
+
+  <!-- System -> Admin -->
+  <path d="M 850 610 L 850 780" class="flow-arrow" marker-end="url(#arrow)"/>
+  <rect x="860" y="680" width="180" height="26" class="label-bg"/>
+  <text x="950" y="698" class="label-text">Flagged Items &amp; Reports</text>
+  
+  <!-- Academic Bottom Footer -->
+  <rect x="35" y="995" width="1530" height="35" fill="#f8fafc" stroke="#000000" stroke-width="1.2"/>
+  <text x="50" y="1017" font-size="11pt" font-weight="bold" fill="#000000">Project: CampusCart</text>
+  <text x="800" y="1017" font-size="11pt" fill="#000000" text-anchor: "middle" text-anchor="middle">Standard: Gane-Sarson / IEEE Software Engineering Notation</text>
+  <text x="1550" y="1017" font-size="11pt" font-weight="bold" fill="#000000" text-anchor="end">DFD Level 0 — Context Diagram</text>
+</svg>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 170" width="100%" height="100%">
+  <defs>
+    <linearGradient id="obs-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="30%" stop-color="#FDE047"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+    <filter id="obs-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#B45309" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Classical Architectural Pavilion Mark -->
+  <g transform="translate(15, 8) scale(1.05)" filter="url(#obs-glow)">
+    <!-- Pediment Roof / Triangular Dome Top -->
+    <polygon points="80,24 130,48 30,48" fill="url(#obs-gold)"/>
+    <rect x="26" y="50" width="108" height="6" rx="2" fill="#18181B"/>
+    
+    <!-- Classical Fluted Pillars on sides -->
+    <rect x="34" y="58" width="9" height="54" rx="2" fill="#18181B"/>
+    <rect x="117" y="58" width="9" height="54" rx="2" fill="#18181B"/>
+    
+    <!-- Central Golden Cart in Negative Arch -->
+    <path d="M52,72 L100,72 Q106,72 104,84 L101,98 Q99,104 91,104 L61,104 Q55,104 56,96 Z" 
+          fill="none" stroke="url(#obs-gold)" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="62" y1="86" x2="96" y2="86" stroke="url(#obs-gold)" stroke-width="2.5"/>
+    
+    <!-- Foundation Base Plinth -->
+    <rect x="24" y="114" width="112" height="6" rx="2" fill="#18181B"/>
+    
+    <!-- Golden Solid Wheels with Obsidian Hubs -->
+    <circle cx="66" cy="128" r="9.5" fill="url(#obs-gold)"/>
+    <circle cx="66" cy="128" r="4" fill="#18181B"/>
+    <circle cx="98" cy="128" r="9.5" fill="url(#obs-gold)"/>
+    <circle cx="98" cy="128" r="4" fill="#18181B"/>
+  </g>
+
+  <!-- Professional Typography (Light Theme Optimized) -->
+  <g transform="translate(180, 5)" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif">
+    <!-- Main Brand Name -->
+    <text x="0" y="88" font-size="52" font-weight="900" letter-spacing="-2" fill="#18181B">Campus<tspan fill="#D97706" font-weight="900">Cart</tspan></text>
+    
+    <!-- Elegant Gold Divider Accent -->
+    <rect x="0" y="106" width="56" height="4" rx="2" fill="#D97706"/>
+    
+    <!-- Clean Professional Tagline -->
+    <text x="68" y="110" font-size="12" font-weight="800" letter-spacing="3.5" fill="#B45309" text-transform="uppercase">VERIFIED STUDENT MARKETPLACE • AKS UNIVERSITY</text>
+  </g>
+</svg>

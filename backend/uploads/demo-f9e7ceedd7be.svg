@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <filter id="shadowCoat" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.14"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="fabricShade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="collarShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pure White Background -->
+  <rect width="600" height="600" fill="#ffffff"/>
+
+  <!-- Lab Coat Group with Soft Ground Shadow -->
+  <g filter="url(#shadowCoat)" transform="translate(85, 30)">
+    <!-- Main Coat Silhouette (Polyester-Cotton Crisp White) -->
+    <!-- Coat Body outline -->
+    <path d="
+      M 160 30 
+      L 100 45 L 30 160 L 75 185 L 115 130 
+      L 115 480 Q 115 500 135 500 L 295 500 Q 315 500 315 480 
+      L 315 130 L 355 185 L 400 160 L 330 45 L 270 30 Z
+    " fill="url(#fabricShade)" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- Left & Right Fold Folds / Underarm Creases -->
+    <path d="M 115 130 L 115 490" stroke="#cbd5e1" stroke-width="1.5"/>
+    <path d="M 315 130 L 315 490" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Inner Neck Opening & Collar (V-neck opening) -->
+    <path d="M 175 30 L 215 170 L 255 30 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+
+    <!-- Woven Brand & Size Label at Inner Neck -->
+    <rect x="185" y="55" width="60" height="26" rx="3" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+    <text x="215" y="67" font-family="Arial, sans-serif" font-size="6.5" font-weight="900" fill="#38bdf8" text-anchor="middle">AKS UNIVERSITY</text>
+    <text x="215" y="76" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#ffffff" text-anchor="middle">SIZE: L (40)</text>
+
+    <!-- Notched Lapel Collars (Left & Right) -->
+    <!-- Left Collar -->
+    <path d="M 160 30 L 140 100 L 175 110 L 215 170 L 175 30 Z" fill="url(#collarShade)" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Right Collar -->
+    <path d="M 270 30 L 290 100 L 255 110 L 215 170 L 255 30 Z" fill="url(#collarShade)" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Front Center Button Placket -->
+    <line x1="215" y1="170" x2="215" y2="500" stroke="#94a3b8" stroke-width="2"/>
+
+    <!-- 4 White Pearl Buttons -->
+    <g fill="#ffffff" stroke="#94a3b8" stroke-width="1.5">
+      <circle cx="215" cy="210" r="7"/><circle cx="215" cy="210" r="2" fill="#cbd5e1"/>
+      <circle cx="215" cy="280" r="7"/><circle cx="215" cy="280" r="2" fill="#cbd5e1"/>
+      <circle cx="215" cy="350" r="7"/><circle cx="215" cy="350" r="2" fill="#cbd5e1"/>
+      <circle cx="215" cy="420" r="7"/><circle cx="215" cy="420" r="2" fill="#cbd5e1"/>
+    </g>
+
+    <!-- Chest Pocket (Left Breast) -->
+    <g transform="translate(135, 175)">
+      <rect width="60" height="70" rx="3" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+      <!-- Blue & Red Lab Pens Clipped in Pocket -->
+      <rect x="15" y="-16" width="6" height="24" rx="2" fill="#2563eb"/>
+      <rect x="13" y="-12" width="2" height="14" fill="#94a3b8"/>
+      <rect x="28" y="-14" width="6" height="22" rx="2" fill="#dc2626"/>
+      <rect x="26" y="-10" width="2" height="12" fill="#94a3b8"/>
+      <!-- Pocket Hem Line -->
+      <line x1="0" y1="12" x2="60" y2="12" stroke="#cbd5e1" stroke-width="1"/>
+    </g>
+
+    <!-- Lower Left Pocket -->
+    <g transform="translate(130, 310)">
+      <rect width="70" height="90" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="0" y1="14" x2="70" y2="14" stroke="#cbd5e1" stroke-width="1"/>
+      <!-- Small notebook corner sticking out -->
+      <polygon points="12,14 45,-6 55,14" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1"/>
+    </g>
+
+    <!-- Lower Right Pocket -->
+    <g transform="translate(230, 310)">
+      <rect width="70" height="90" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+      <line x1="0" y1="14" x2="70" y2="14" stroke="#cbd5e1" stroke-width="1"/>
+    </g>
+
+    <!-- Sleeves Hem Details -->
+    <line x1="30" y1="160" x2="75" y2="185" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="400" y1="160" x2="355" y2="185" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Bottom Badge Card -->
+    <g transform="translate(115, 510)">
+      <rect width="200" height="32" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="100" y="20" font-family="Arial, sans-serif" font-size="10" font-weight="900" fill="#38bdf8" text-anchor="middle">WHITE LAB COAT • SIZE: L (40)</text>
+    </g>
+  </g>
+</svg>

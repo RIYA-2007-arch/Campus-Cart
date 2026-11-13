@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <filter id="shadowKit" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="#ffffff"/>
+
+  <!-- Kit Outer Container / Presentation Board -->
+  <g filter="url(#shadowKit)">
+    <rect x="45" y="45" width="510" height="510" rx="20" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+    <rect x="55" y="55" width="490" height="490" rx="16" fill="#ffffff"/>
+
+    <!-- Header Badge -->
+    <rect x="70" y="70" width="460" height="36" rx="6" fill="#0284c7"/>
+    <text x="300" y="93" font-family="Arial, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">ARDUINO COMPLETE STARTER PROJECT KIT</text>
+
+    <!-- 1. Arduino Uno R3 Board -->
+    <g transform="translate(70, 125)">
+      <!-- Uno PCB -->
+      <rect width="180" height="130" rx="8" fill="#0284c7" stroke="#0369a1" stroke-width="1.5"/>
+      <!-- USB Type B connector -->
+      <rect x="-10" y="20" width="28" height="26" rx="2" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
+      <rect x="0" y="26" width="10" height="14" fill="#334155"/>
+      <!-- DC Power Barrel Jack -->
+      <rect x="-10" y="80" width="32" height="28" rx="2" fill="#1e293b" stroke="#0f172a" stroke-width="1"/>
+      <!-- ATmega328P DIP IC -->
+      <rect x="65" y="70" width="70" height="22" rx="2" fill="#1e293b"/>
+      <text x="100" y="84" font-family="monospace" font-size="6" fill="#ffffff" text-anchor="middle">ATmega328P</text>
+      <!-- Crystal Oscillator -->
+      <rect x="45" y="40" width="14" height="22" rx="3" fill="#cbd5e1" stroke="#94a3b8"/>
+      <!-- Reset button -->
+      <rect x="15" y="8" width="12" height="12" rx="2" fill="#dc2626"/>
+      <!-- Female Headers (Digital) -->
+      <rect x="60" y="6" width="110" height="10" rx="1" fill="#1e293b"/>
+      <!-- Female Headers (Power & Analog) -->
+      <rect x="60" y="114" width="110" height="10" rx="1" fill="#1e293b"/>
+      <!-- Branding -->
+      <text x="110" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#ffffff">UNO</text>
+      <text x="140" y="45" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#bae6fd">R3</text>
+    </g>
+
+    <!-- 2. Solderless Breadboard 830 Points -->
+    <g transform="translate(280, 125)">
+      <!-- White Breadboard Body -->
+      <rect width="250" height="130" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+      <!-- Red Power Rail Line -->
+      <line x1="15" y1="18" x2="235" y2="18" stroke="#ef4444" stroke-width="2"/>
+      <!-- Blue Power Rail Line -->
+      <line x1="15" y1="28" x2="235" y2="28" stroke="#3b82f6" stroke-width="2"/>
+      <!-- Bottom Red/Blue rails -->
+      <line x1="15" y1="102" x2="235" y2="102" stroke="#3b82f6" stroke-width="2"/>
+      <line x1="15" y1="112" x2="235" y2="112" stroke="#ef4444" stroke-width="2"/>
+      <!-- Center Divider Trough -->
+      <rect x="15" y="62" width="220" height="6" fill="#e2e8f0"/>
+      <!-- Tie point dots grid pattern -->
+      <g fill="#94a3b8">
+        <circle cx="35" cy="42" r="1.5"/><circle cx="55" cy="42" r="1.5"/><circle cx="75" cy="42" r="1.5"/><circle cx="95" cy="42" r="1.5"/><circle cx="115" cy="42" r="1.5"/><circle cx="135" cy="42" r="1.5"/><circle cx="155" cy="42" r="1.5"/><circle cx="175" cy="42" r="1.5"/><circle cx="195" cy="42" r="1.5"/><circle cx="215" cy="42" r="1.5"/>
+        <circle cx="35" cy="52" r="1.5"/><circle cx="55" cy="52" r="1.5"/><circle cx="75" cy="52" r="1.5"/><circle cx="95" cy="52" r="1.5"/><circle cx="115" cy="52" r="1.5"/><circle cx="135" cy="52" r="1.5"/><circle cx="155" cy="52" r="1.5"/><circle cx="175" cy="52" r="1.5"/><circle cx="195" cy="52" r="1.5"/><circle cx="215" cy="52" r="1.5"/>
+        <circle cx="35" cy="78" r="1.5"/><circle cx="55" cy="78" r="1.5"/><circle cx="75" cy="78" r="1.5"/><circle cx="95" cy="78" r="1.5"/><circle cx="115" cy="78" r="1.5"/><circle cx="135" cy="78" r="1.5"/><circle cx="155" cy="78" r="1.5"/><circle cx="175" cy="78" r="1.5"/><circle cx="195" cy="78" r="1.5"/><circle cx="215" cy="78" r="1.5"/>
+        <circle cx="35" cy="88" r="1.5"/><circle cx="55" cy="88" r="1.5"/><circle cx="75" cy="88" r="1.5"/><circle cx="95" cy="88" r="1.5"/><circle cx="115" cy="88" r="1.5"/><circle cx="135" cy="88" r="1.5"/><circle cx="155" cy="88" r="1.5"/><circle cx="175" cy="88" r="1.5"/><circle cx="195" cy="88" r="1.5"/><circle cx="215" cy="88" r="1.5"/>
+      </g>
+      <text x="125" y="67" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#64748b" text-anchor="middle">830 POINTS BREADBOARD</text>
+    </g>
+
+    <!-- 3. Micro Servo Motor 9g -->
+    <g transform="translate(70, 275)">
+      <rect width="105" height="110" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <rect x="22" y="30" width="60" height="42" rx="4" fill="#0284c7"/>
+      <circle cx="40" cy="51" r="14" fill="#0284c7" stroke="#0369a1" stroke-width="2"/>
+      <circle cx="40" cy="51" r="6" fill="#ffffff"/>
+      <!-- Servo Horn -->
+      <path d="M 40 45 L 75 48 L 75 54 L 40 57 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+      <text x="52" y="94" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#334155" text-anchor="middle">SERVO SG90</text>
+    </g>
+
+    <!-- 4. Component Assortment Box (LEDs, Resistors, Buttons) -->
+    <g transform="translate(190, 275)">
+      <rect width="180" height="110" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <!-- Colored LEDs -->
+      <circle cx="215-190" cy="305-275" r="7" fill="#ef4444" stroke="#dc2626"/>
+      <circle cx="235-190" cy="305-275" r="7" fill="#22c55e" stroke="#16a34a"/>
+      <circle cx="255-190" cy="305-275" r="7" fill="#eab308" stroke="#ca8a04"/>
+      <circle cx="275-190" cy="305-275" r="7" fill="#3b82f6" stroke="#2563eb"/>
+      <circle cx="295-190" cy="305-275" r="7" fill="#ffffff" stroke="#94a3b8"/>
+      <!-- Resistors -->
+      <g transform="translate(20, 50)">
+        <rect width="50" height="6" rx="2" fill="#d97706"/>
+        <line x1="-10" y1="3" x2="60" y2="3" stroke="#94a3b8" stroke-width="1.5"/>
+        <line x1="10" y1="0" x2="10" y2="6" stroke="#ef4444" stroke-width="2"/>
+        <line x1="20" y1="0" x2="20" y2="6" stroke="#3b82f6" stroke-width="2"/>
+        <line x1="30" y1="0" x2="30" y2="6" stroke="#15803d" stroke-width="2"/>
+        <line x1="40" y1="0" x2="40" y2="6" stroke="#eab308" stroke-width="2"/>
+      </g>
+      <!-- Push buttons -->
+      <rect x="25" y="70" width="16" height="16" rx="2" fill="#1e293b"/>
+      <circle cx="33" cy="78" r="4" fill="#ef4444"/>
+      <rect x="55" y="70" width="16" height="16" rx="2" fill="#1e293b"/>
+      <circle cx="63" cy="78" r="4" fill="#3b82f6"/>
+      <rect x="85" y="70" width="16" height="16" rx="2" fill="#1e293b"/>
+      <circle cx="93" cy="78" r="4" fill="#22c55e"/>
+      <text x="135" y="80" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#334155">LEDs, R &amp; Keys</text>
+    </g>
+
+    <!-- 5. 65-Piece Jumper Wire Bundle -->
+    <g transform="translate(385, 275)">
+      <rect width="145" height="110" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+      <!-- S-curve Dupont cables -->
+      <path d="M 15 20 Q 70 80 130 30" fill="none" stroke="#ef4444" stroke-width="3"/>
+      <path d="M 15 35 Q 70 95 130 45" fill="none" stroke="#3b82f6" stroke-width="3"/>
+      <path d="M 15 50 Q 70 110 130 60" fill="none" stroke="#eab308" stroke-width="3"/>
+      <path d="M 15 65 Q 70 125 130 75" fill="none" stroke="#10b981" stroke-width="3"/>
+      <path d="M 15 80 Q 70 140 130 90" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+      <text x="72" y="102" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#334155" text-anchor="middle">65pcs Jumper Wires</text>
+    </g>
+
+    <!-- Bottom Feature Badges -->
+    <g transform="translate(70, 410)">
+      <rect width="460" height="110" rx="10" fill="#0f172a"/>
+      <text x="230" y="32" font-family="Arial, sans-serif" font-size="13" font-weight="900" fill="#38bdf8" text-anchor="middle">IDEAL FOR ENGINEERING &amp; IOT LAB PROJECTS</text>
+      <!-- Badges -->
+      <g transform="translate(30, 50)" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffffff">
+        <rect width="115" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+        <text x="57" y="21" text-anchor="middle">⚡ Arduino Uno R3</text>
+
+        <rect x="135" width="130" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+        <text x="200" y="21" text-anchor="middle">🔌 830pt Breadboard</text>
+
+        <rect x="285" width="115" height="34" rx="6" fill="#1e293b" stroke="#334155"/>
+        <text x="342" y="21" text-anchor="middle">⚙️ Sensors &amp; Servo</text>
+      </g>
+    </g>
+  </g>
+</svg>

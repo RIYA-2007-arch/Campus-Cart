@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="chassis" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#bg)"/>
+
+  <!-- Laptop Display Lid (HP Silver Sleek) -->
+  <g filter="url(#shadow)" transform="translate(110, 60)">
+    <rect x="0" y="0" width="380" height="235" rx="10" fill="url(#chassis)" stroke="#64748b" stroke-width="2"/>
+    <rect x="12" y="12" width="356" height="211" rx="4" fill="url(#screen)"/>
+    <!-- HP Minimalist Gradient Waves -->
+    <path d="M 12 140 Q 120 80, 220 120 T 368 100 L 368 223 L 12 223 Z" fill="rgba(255, 255, 255, 0.3)"/>
+    <path d="M 12 170 Q 180 130, 280 170 T 368 150 L 368 223 L 12 223 Z" fill="rgba(250, 204, 21, 0.3)"/>
+    <rect x="12" y="210" width="356" height="13" fill="rgba(15, 23, 42, 0.7)"/>
+    <circle cx="180" cy="216" r="3" fill="#34d399"/>
+    <circle cx="190" cy="216" r="3" fill="#34d399"/>
+    <circle cx="200" cy="216" r="3" fill="#34d399"/>
+    <!-- Webcam -->
+    <circle cx="190" cy="6" r="2.5" fill="#0f172a"/>
+    <!-- HP Slash Logo on chin -->
+    <circle cx="190" cy="229" r="6" fill="#0284c7"/>
+    <text x="190" y="233" fill="#ffffff" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="8" font-style="italic" font-weight="900" text-anchor="middle">hp</text>
+  </g>
+
+  <!-- Laptop Keyboard Base -->
+  <g filter="url(#shadow)" transform="translate(60, 285)">
+    <polygon points="50,0 330,0 380,65 0,65" fill="#94a3b8" stroke="#64748b" stroke-width="1.5"/>
+    <polygon points="52,2 328,2 376,63 4,63" fill="url(#chassis)"/>
+    <polygon points="70,6 310,6 335,40 45,40" fill="#334155" stroke="#475569"/>
+    <rect x="150" y="44" width="80" height="18" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="0.8"/>
+  </g>
+
+  <!-- Spec Badge Pill -->
+  <g transform="translate(20, 24)">
+    <rect x="0" y="0" width="180" height="32" rx="16" fill="#f0fdf4" stroke="#10b981" stroke-width="1.5"/>
+    <text x="90" y="21" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" font-weight="800" fill="#15803d" text-anchor="middle">HP 15s / PAVILION</text>
+  </g>
+
+  <g transform="translate(430, 24)">
+    <rect x="0" y="0" width="150" height="32" rx="16" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+    <text x="75" y="21" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" font-weight="800" fill="#065f46" text-anchor="middle">✓ VERIFIED STUDENT</text>
+  </g>
+</svg>

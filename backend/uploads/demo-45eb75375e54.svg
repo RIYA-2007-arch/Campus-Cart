@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <filter id="shadowBox" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="lidGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="600" fill="#ffffff"/>
+
+  <!-- Transparent Organizer Case Shadow & Base -->
+  <g filter="url(#shadowBox)" transform="translate(60, 80)">
+    <!-- Outer Plastic Case -->
+    <rect width="480" height="440" rx="16" fill="#f8fafc" stroke="#94a3b8" stroke-width="2.5"/>
+    <rect x="6" y="6" width="468" height="428" rx="12" fill="#f1f5f9"/>
+
+    <!-- Dual Snap Latches -->
+    <rect x="140" y="-8" width="50" height="16" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+    <rect x="290" y="-8" width="50" height="16" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+
+    <!-- Internal Grid Compartments (3 rows x 5 columns) -->
+    <!-- Grid borders -->
+    <path d="
+      M 16 145 H 464 M 16 285 H 464
+      M 105 15 V 425 M 195 15 V 425 M 285 15 V 425 M 375 15 V 425
+    " stroke="#cbd5e1" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Module 1: Ultrasonic HC-SR04 -->
+    <g transform="translate(24, 30)">
+      <rect width="70" height="45" rx="4" fill="#0284c7"/>
+      <circle cx="20" cy="22" r="14" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+      <circle cx="20" cy="22" r="8" fill="#334155"/>
+      <circle cx="50" cy="22" r="14" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+      <circle cx="50" cy="22" r="8" fill="#334155"/>
+      <text x="35" y="42" font-family="monospace" font-size="5" fill="#ffffff" text-anchor="middle">HC-SR04</text>
+    </g>
+
+    <!-- Module 2: Analog Joystick -->
+    <g transform="translate(115, 30)">
+      <rect width="70" height="60" rx="4" fill="#1e293b"/>
+      <circle cx="35" cy="30" r="22" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+      <circle cx="35" cy="30" r="12" fill="#334155"/>
+      <circle cx="35" cy="30" r="6" fill="#1e293b"/>
+      <text x="35" y="56" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#38bdf8" text-anchor="middle">JOYSTICK</text>
+    </g>
+
+    <!-- Module 3: DHT11 Temp/Humidity (Blue slotted) -->
+    <g transform="translate(208, 30)">
+      <rect width="65" height="50" rx="4" fill="#2563eb"/>
+      <rect x="12" y="8" width="41" height="30" rx="2" fill="#1d4ed8"/>
+      <!-- Grille slots -->
+      <line x1="18" y1="14" x2="47" y2="14" stroke="#60a5fa" stroke-width="2"/>
+      <line x1="18" y1="20" x2="47" y2="20" stroke="#60a5fa" stroke-width="2"/>
+      <line x1="18" y1="26" x2="47" y2="26" stroke="#60a5fa" stroke-width="2"/>
+      <line x1="18" y1="32" x2="47" y2="32" stroke="#60a5fa" stroke-width="2"/>
+      <text x="32" y="46" font-family="monospace" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">DHT11</text>
+    </g>
+
+    <!-- Module 4: Flame / Fire Sensor -->
+    <g transform="translate(298, 30)">
+      <rect width="65" height="40" rx="3" fill="#047857"/>
+      <ellipse cx="14" cy="20" rx="6" ry="9" fill="#000000"/>
+      <rect x="26" y="14" width="16" height="12" rx="2" fill="#3b82f6"/>
+      <circle cx="34" cy="20" r="3" fill="#eab308"/>
+      <text x="50" y="24" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff">FLAME</text>
+    </g>
+
+    <!-- Module 5: Buzzer Module -->
+    <g transform="translate(388, 30)">
+      <rect width="65" height="50" rx="3" fill="#15803d"/>
+      <circle cx="32" cy="25" r="16" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="32" cy="25" r="3" fill="#e2e8f0"/>
+      <text x="32" y="46" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">BUZZER</text>
+    </g>
+
+    <!-- Row 2: PIR Motion, Sound Sensor, Touch Sensor, Relay, Light Sensor LDR -->
+    <!-- PIR Motion Sensor -->
+    <g transform="translate(24, 160)">
+      <rect width="70" height="55" rx="4" fill="#047857"/>
+      <circle cx="35" cy="27" r="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+      <!-- Fresnel lens facets -->
+      <path d="M 22 27 Q 35 15 48 27 Q 35 39 22 27" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="35" y="50" font-family="monospace" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">PIR SENSOR</text>
+    </g>
+
+    <!-- Sound Mic Module -->
+    <g transform="translate(115, 160)">
+      <rect width="70" height="45" rx="3" fill="#dc2626"/>
+      <circle cx="20" cy="22" r="10" fill="#94a3b8" stroke="#475569" stroke-width="1"/>
+      <rect x="36" y="14" width="16" height="14" rx="2" fill="#3b82f6"/>
+      <text x="44" y="38" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">SOUND</text>
+    </g>
+
+    <!-- Touch Sensor -->
+    <g transform="translate(208, 160)">
+      <rect width="65" height="45" rx="3" fill="#b91c1c"/>
+      <circle cx="32" cy="20" r="12" fill="#991b1b" stroke="#fca5a5" stroke-width="1.5"/>
+      <text x="32" y="24" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">TOUCH</text>
+      <text x="32" y="38" font-family="monospace" font-size="5" fill="#fecaca" text-anchor="middle">TTP223</text>
+    </g>
+
+    <!-- 1-Channel Relay -->
+    <g transform="translate(298, 160)">
+      <rect width="65" height="55" rx="3" fill="#0284c7"/>
+      <rect x="8" y="10" width="34" height="28" rx="2" fill="#1d4ed8"/>
+      <rect x="44" y="14" width="15" height="20" rx="2" fill="#15803d"/>
+      <text x="25" y="28" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">RELAY</text>
+    </g>
+
+    <!-- LDR Light Sensor -->
+    <g transform="translate(388, 160)">
+      <rect width="65" height="45" rx="3" fill="#0284c7"/>
+      <circle cx="20" cy="22" r="8" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+      <!-- S wave on LDR -->
+      <path d="M 16 22 Q 20 18 24 22" fill="none" stroke="#dc2626" stroke-width="1"/>
+      <rect x="35" y="14" width="16" height="14" rx="2" fill="#3b82f6"/>
+      <text x="43" y="38" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">LDR LIGHT</text>
+    </g>
+
+    <!-- Row 3: IR Obstacle, RFID/NFC, Dupont Wires bundle, Rotary Encoder, Gas Sensor MQ-2 -->
+    <!-- IR Obstacle -->
+    <g transform="translate(24, 300)">
+      <rect width="70" height="45" rx="3" fill="#0284c7"/>
+      <circle cx="16" cy="18" r="5" fill="#1e293b"/>
+      <circle cx="16" cy="30" r="5" fill="#ffffff" stroke="#94a3b8" stroke-width="1"/>
+      <text x="44" y="26" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff">IR AVOID</text>
+    </g>
+
+    <!-- RFID Tag & Reader -->
+    <g transform="translate(115, 300)">
+      <rect width="70" height="55" rx="3" fill="#1e3a8a"/>
+      <circle cx="35" cy="25" r="14" fill="#3b82f6" stroke="#93c5fd" stroke-width="1"/>
+      <text x="35" y="28" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#ffffff" text-anchor="middle">RFID</text>
+      <text x="35" y="48" font-family="monospace" font-size="6" fill="#bfdbfe" text-anchor="middle">RC522</text>
+    </g>
+
+    <!-- Jumper Wires Bundle in compartment -->
+    <g transform="translate(208, 295)">
+      <path d="M 10 15 Q 35 -5 55 20 Q 30 65 15 35 Q 40 45 55 10" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+      <path d="M 15 20 Q 40 5 50 35 Q 25 55 10 30" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+      <path d="M 12 10 Q 30 50 50 25 Q 40 60 20 40" fill="none" stroke="#eab308" stroke-width="2.5"/>
+      <path d="M 8 30 Q 35 15 55 45 Q 20 60 8 30" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+      <text x="32" y="60" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" fill="#475569" text-anchor="middle">JUMPERS</text>
+    </g>
+
+    <!-- Rotary Encoder -->
+    <g transform="translate(298, 300)">
+      <rect width="65" height="50" rx="3" fill="#1e293b"/>
+      <circle cx="32" cy="22" r="14" fill="#64748b" stroke="#cbd5e1" stroke-width="1.5"/>
+      <rect x="30" y="10" width="4" height="24" fill="#0f172a"/>
+      <text x="32" y="46" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">ENCODER</text>
+    </g>
+
+    <!-- MQ Gas Sensor -->
+    <g transform="translate(388, 300)">
+      <rect width="65" height="50" rx="3" fill="#15803d"/>
+      <circle cx="32" cy="22" r="14" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="32" cy="22" r="9" fill="#e2e8f0"/>
+      <text x="32" y="46" font-family="monospace" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">MQ-2 GAS</text>
+    </g>
+
+    <!-- Box Front Banner / Label -->
+    <g transform="translate(20, 375)">
+      <rect width="440" height="42" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="220" y="22" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="900" fill="#38bdf8" text-anchor="middle" letter-spacing="1">37 IN 1 SENSOR MODULE KIT</text>
+      <text x="220" y="34" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f8fafc" text-anchor="middle">COMPATIBLE WITH ARDUINO &amp; RASPBERRY PI</text>
+    </g>
+  </g>
+</svg>
