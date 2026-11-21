@@ -49,7 +49,7 @@ FRONTEND_ORIGINS = [
     ).split(",")
     if origin.strip()
 ]
-CORS(app, resources={r"/api/*": {"origins": FRONTEND_ORIGINS}, r"/uploads/*": {"origins": FRONTEND_ORIGINS}})
+CORS(app, resources={r"/api/*": {"origins": "*"}, r"/uploads/*": {"origins": "*"}}, supports_credentials=False)
 
 db = SQLAlchemy(app)
 
@@ -108,8 +108,8 @@ def cleanup_unwanted_bulb_calculator():
 
 socketio = SocketIO(app, cors_allowed_origins=FRONTEND_ORIGINS) if SOCKET_IO_ENABLED else None
 
-MAIL_USERNAME = os.getenv("MAIL_USERNAME", "").strip()
-MAIL_APP_PASSWORD = os.getenv("MAIL_APP_PASSWORD", "").replace(" ", "").strip()
+MAIL_USERNAME = os.getenv("MAIL_USERNAME", "sonimaya3363@gmail.com").strip()
+MAIL_APP_PASSWORD = os.getenv("MAIL_APP_PASSWORD", "pombabukmvqwuvid").replace(" ", "").strip()
 MAIL_HOST = os.getenv("MAIL_HOST", "smtp.gmail.com").strip()
 MAIL_PORT = int(os.getenv("MAIL_PORT", "587"))
 
@@ -473,7 +473,6 @@ def issue_otp(email, purpose, subject, heading):
     return jsonify({
         "success": True,
         "message": "OTP sent successfully! Please check your email inbox.",
-        "otp": otp,  # Fast auto-fill for demo & instant verification
     })
 
 

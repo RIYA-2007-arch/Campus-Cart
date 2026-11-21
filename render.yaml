@@ -1,0 +1,38 @@
+services:
+  # 1. Backend API (Flask Python Web Service)
+  - type: web
+    name: campuscart-backend
+    env: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: MAIL_USERNAME
+        value: sonimaya3363@gmail.com
+      - key: MAIL_APP_PASSWORD
+        value: pombabukmvqwuvid
+      - key: SECRET_KEY
+        generateValue: true
+
+  # 2. Frontend Web Application (React Vite Static Site)
+  - type: web
+    name: campuscart-frontend
+    env: static
+    rootDir: frontend
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: campuscart-backend
+          property: host
+        # Automatically connects frontend to the backend URL above!

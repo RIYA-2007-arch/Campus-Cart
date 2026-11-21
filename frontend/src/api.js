@@ -1,8 +1,18 @@
 import axios from "axios";
 
-export const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/api";
+// Smart API URL resolution:
+// 1. Custom env variable if provided (VITE_API_URL)
+// 2. If running on public cloud (Vercel, Render, Netlify), automatically use Render backend
+// 3. If running locally on development machine, use localhost
+export const API_URL =
+  import.meta.env.VITE_API_URL ||
+  (typeof window !== "undefined" &&
+  window.location.hostname !== "localhost" &&
+  window.location.hostname !== "127.0.0.1"
+    ? "https://campuscart-backend.onrender.com/api"
+    : "http://127.0.0.1:5000/api");
 
-const api = axios.create({ baseURL: API_URL, timeout: 20000 });
+const api = axios.create({ baseURL: API_URL, timeout: 25000 });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("cc_token");

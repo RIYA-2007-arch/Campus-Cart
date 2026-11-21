@@ -125,13 +125,8 @@ export default function AuthPage({ initialMode = "login" }) {
       const response = await api.post("/send-otp", { email });
       setOtpSent(true);
       setEmailVerified(false);
-      if (response.data.otp) {
-        setOtpCode(response.data.otp);
-        setSuccessMsg(`⚡ Fast OTP: Code [${response.data.otp}] auto-filled! Also sent to your email inbox.`);
-      } else {
-        setOtpCode("");
-        setSuccessMsg(response.data.message || "OTP code sent to your email. Enter below to verify.");
-      }
+      setOtpCode("");
+      setSuccessMsg(response.data.message || "OTP code sent to your email. Enter below to verify.");
     } catch (err) {
       setErrorMsg(messageFrom(err, "Unable to verify email right now. Please try again."));
     } finally {
@@ -252,13 +247,8 @@ export default function AuthPage({ initialMode = "login" }) {
       const response = await api.post("/forgot-password/send-otp", { email });
       setForgotOtpSent(true);
       setForgotOtpVerified(false);
-      if (response.data.otp) {
-        setForgotOtp(response.data.otp);
-        setSuccessMsg(`⚡ Fast OTP: Code [${response.data.otp}] auto-filled! Also sent to your email inbox.`);
-      } else {
-        setForgotOtp("");
-        setSuccessMsg(response.data.message || "OTP sent to your email. Enter it below to reset password.");
-      }
+      setForgotOtp("");
+      setSuccessMsg(response.data.message || "OTP sent to your email. Enter it below to reset password.");
     } catch (err) {
       setErrorMsg(messageFrom(err, "Unable to send reset code."));
     } finally {
